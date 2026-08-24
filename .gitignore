@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+
+# Local editor/tool config
+.claude/
+.vscode/
+
+# Runtime state / personal trading data — not code, shouldn't live in the repo
+holdings.json
+trade_archive.json
+listings_seen.json
+.alert_state.json
+streamlit.log
+nohup.out
+
+# Build artifacts
+*.egg-info/

@@ -1,0 +1,10 @@
+dependencies = [
+  "pandas",
+  "numpy",
+  "requests",
+  "python-dotenv",
+  "rich",
+  "ccxt",
+  "yfinance",
+  "streamlit"
+]
