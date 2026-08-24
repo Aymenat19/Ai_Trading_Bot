@@ -8,9 +8,11 @@ __pycache__/
 .claude/
 .vscode/
 
-# Runtime state / personal trading data — not code, shouldn't live in the repo
+# Runtime state / personal trading data — not code, shouldn't live in the repo.
+# trade_archive.json is the exception: it's intentionally synced (see
+# scripts/sync_archive.py) so the read-only viewer_app.py on Streamlit Community
+# Cloud can display it. It has no position sizes, just signals + outcomes.
 holdings.json
-trade_archive.json
 listings_seen.json
 .alert_state.json
 streamlit.log
