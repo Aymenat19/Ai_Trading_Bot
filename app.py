@@ -49,7 +49,7 @@ def load_holdings(path: str = "holdings.json"):
 
 # ─────────────────────────── UI controls ─────────────────────────────────────
 
-crypto_symbols_text = st.text_area("Crypto symbols (comma-separated)", value=",".join(DEFAULT_CRYPTO), height=80)
+crypto_symbols_text = st.text_area("Crypto symbols (comma-separated)", value=",".join(DEFAULT_SYMBOLS), height=80)
 stocks_text = st.text_area("Stocks/ETFs tickers (comma-separated)", value=",".join(DEFAULT_STOCKS), height=60)
 
 col0, col1, col2, col3 = st.columns(4)
