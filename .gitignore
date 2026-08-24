@@ -16,6 +16,7 @@ holdings.json
 listings_seen.json
 .alert_state.json
 streamlit.log
+sync_archive.log
 nohup.out
 
 # Build artifacts
