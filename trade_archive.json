@@ -7273,5 +7273,30 @@
     "outcome_pct": -4.5,
     "resolved_at": "2026-08-10T20:01:29.917367+00:00",
     "notes": ""
+  },
+  {
+    "id": "f770f508",
+    "logged_at": "2026-08-26T11:50:20.487545+00:00",
+    "market": "CRYPTO",
+    "symbol": "FIDA/USDT",
+    "action": "ADD",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.01997,
+    "entry_high": 0.02001,
+    "stop": 0.01935,
+    "targets": [
+      0.02079,
+      0.02159
+    ],
+    "tp1": 0.02079,
+    "tp2": 0.02159,
+    "rr": 2.5,
+    "expected_pct": 8.0,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.3% in 4 bars, RSI 69.4",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
