@@ -7298,5 +7298,30 @@
     "outcome_pct": 8.1,
     "resolved_at": "2026-08-26T12:13:42.355880+00:00",
     "notes": ""
+  },
+  {
+    "id": "84fbdc6c",
+    "logged_at": "2026-08-26T13:41:51.176301+00:00",
+    "market": "CRYPTO",
+    "symbol": "BMT/USDT",
+    "action": "BUY",
+    "exchange": "Kraken",
+    "entry_low": 0.024476,
+    "entry_high": 0.024524,
+    "stop": 0.022788,
+    "targets": [
+      0.02748,
+      0.03137
+    ],
+    "tp1": 0.02748,
+    "tp2": 0.03137,
+    "rr": 4.01,
+    "expected_pct": 28.0,
+    "confidence": 88,
+    "setup": "Hot momentum pullback: +57.1% 24h mover, pulled back 10.8% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
