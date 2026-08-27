@@ -7348,5 +7348,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "439464d3",
+    "logged_at": "2026-08-27T09:57:50.759110+00:00",
+    "market": "CRYPTO",
+    "symbol": "TUT/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.053506,
+    "entry_high": 0.053614,
+    "stop": 0.050975,
+    "targets": [
+      0.0625,
+      0.0728
+    ],
+    "tp1": 0.0625,
+    "tp2": 0.0728,
+    "rr": 7.44,
+    "expected_pct": 35.9,
+    "confidence": 83,
+    "setup": "Hot momentum pullback: +17.0% 24h mover, pulled back 14.3% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
