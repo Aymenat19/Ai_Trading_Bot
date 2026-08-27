@@ -7323,5 +7323,30 @@
     "outcome_pct": -6.9,
     "resolved_at": "2026-08-26T17:25:58.181903+00:00",
     "notes": ""
+  },
+  {
+    "id": "4d7b631d",
+    "logged_at": "2026-08-27T09:17:17.464897+00:00",
+    "market": "CRYPTO",
+    "symbol": "RUNE/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.581418,
+    "entry_high": 0.582582,
+    "stop": 0.551632,
+    "targets": [
+      0.631,
+      0.702
+    ],
+    "tp1": 0.631,
+    "tp2": 0.702,
+    "rr": 3.95,
+    "expected_pct": 20.6,
+    "confidence": 82,
+    "setup": "Hot momentum pullback: +19.4% 24h mover, pulled back 7.8% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
