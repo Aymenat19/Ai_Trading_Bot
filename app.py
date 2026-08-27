@@ -378,10 +378,10 @@ while True:
                                  f"TP2: {sel_rec['tp2']} | Stop: {sel_rec['stop']}")
                     mc1, mc2, mc3, mc4 = st.columns(4)
                     clicked = None
-                    if mc1.button("✅ Hit TP1"):   clicked = "HIT_TP1"
-                    if mc2.button("🎯 Hit TP2"):   clicked = "HIT_TP2"
-                    if mc3.button("❌ Stopped"):   clicked = "STOPPED_OUT"
-                    if mc4.button("⏰ Expire"):    clicked = "EXPIRED"
+                    if mc1.button("✅ Hit TP1", key=f"hit_tp1_{_k}"):   clicked = "HIT_TP1"
+                    if mc2.button("🎯 Hit TP2", key=f"hit_tp2_{_k}"):   clicked = "HIT_TP2"
+                    if mc3.button("❌ Stopped", key=f"stopped_{_k}"):   clicked = "STOPPED_OUT"
+                    if mc4.button("⏰ Expire", key=f"expired_{_k}"):    clicked = "EXPIRED"
                     if clicked and sel_rec:
                         for r in archive_fresh:
                             if r["id"] == sel_id:
@@ -403,7 +403,7 @@ while True:
             with st.expander("📝 Add note to a signal"):
                 note_id   = st.selectbox("Signal", [r["id"] for r in archive_fresh], key=f"note_id_{_k}")
                 note_text = st.text_input("Note text", key=f"note_txt_{_k}")
-                if st.button("Save note"):
+                if st.button("Save note", key=f"save_note_{_k}"):
                     for r in archive_fresh:
                         if r["id"] == note_id:
                             r["notes"] = note_text
