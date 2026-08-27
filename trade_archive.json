@@ -7498,5 +7498,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "982390bb",
+    "logged_at": "2026-08-27T20:47:43.457474+00:00",
+    "market": "CRYPTO",
+    "symbol": "TRUMP/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 2.576421,
+    "entry_high": 2.581579,
+    "stop": 2.467101,
+    "targets": [
+      2.821,
+      3.139
+    ],
+    "tp1": 2.821,
+    "tp2": 3.139,
+    "rr": 5.0,
+    "expected_pct": 21.7,
+    "confidence": 84,
+    "setup": "Hot momentum pullback: +15.5% 24h mover, pulled back 8.6% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
