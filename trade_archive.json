@@ -7544,9 +7544,9 @@
     "expected_pct": 7.6,
     "confidence": 81,
     "setup": "Range bounce: 9.9% channel, price at support 1.1070",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -2.5,
+    "resolved_at": "2026-08-28T16:15:21.552910+00:00",
     "notes": ""
   },
   {
