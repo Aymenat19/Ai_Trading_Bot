@@ -7548,5 +7548,55 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "13df7373",
+    "logged_at": "2026-08-28T14:30:34.959098+00:00",
+    "market": "CRYPTO",
+    "symbol": "JASMY/USDT",
+    "action": "ADD",
+    "exchange": "Binance",
+    "entry_low": 0.004645,
+    "entry_high": 0.004655,
+    "stop": 0.004532,
+    "targets": [
+      0.004773,
+      0.004981
+    ],
+    "tp1": 0.004773,
+    "tp2": 0.004981,
+    "rr": 2.82,
+    "expected_pct": 7.1,
+    "confidence": 81,
+    "setup": "Range bounce: 9.4% channel, price at support 0.0046",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "d3acb6f0",
+    "logged_at": "2026-08-28T14:37:29.731588+00:00",
+    "market": "CRYPTO",
+    "symbol": "DEXE/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 2.069928,
+    "entry_high": 2.074072,
+    "stop": 2.005152,
+    "targets": [
+      2.15556,
+      2.23912
+    ],
+    "tp1": 2.15556,
+    "tp2": 2.23912,
+    "rr": 2.5,
+    "expected_pct": 8.1,
+    "confidence": 90,
+    "setup": "Momentum rally: +7.6% in 4 bars, RSI 73.9",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
