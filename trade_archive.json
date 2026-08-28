@@ -7523,5 +7523,30 @@
     "outcome_pct": 9.5,
     "resolved_at": "2026-08-28T03:47:46.903484+00:00",
     "notes": ""
+  },
+  {
+    "id": "88a58773",
+    "logged_at": "2026-08-28T14:23:42.247776+00:00",
+    "market": "CRYPTO",
+    "symbol": "ZRO/USDT",
+    "action": "ADD",
+    "exchange": "Binance",
+    "entry_low": 1.122876,
+    "entry_high": 1.125124,
+    "stop": 1.094338,
+    "targets": [
+      1.1565,
+      1.209403
+    ],
+    "tp1": 1.1565,
+    "tp2": 1.209403,
+    "rr": 2.88,
+    "expected_pct": 7.6,
+    "confidence": 81,
+    "setup": "Range bounce: 9.9% channel, price at support 1.1070",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
