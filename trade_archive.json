@@ -7569,9 +7569,9 @@
     "expected_pct": 7.1,
     "confidence": 81,
     "setup": "Range bounce: 9.4% channel, price at support 0.0046",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "HIT_TP1",
+    "outcome_pct": 2.8,
+    "resolved_at": "2026-08-28T15:05:40.348077+00:00",
     "notes": ""
   },
   {
