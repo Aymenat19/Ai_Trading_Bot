@@ -7598,5 +7598,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "54ef99ba",
+    "logged_at": "2026-08-28T14:51:22.684752+00:00",
+    "market": "CRYPTO",
+    "symbol": "NIL/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.046723,
+    "entry_high": 0.046817,
+    "stop": 0.04479,
+    "targets": [
+      0.049245,
+      0.051721
+    ],
+    "tp1": 0.049245,
+    "tp2": 0.051721,
+    "rr": 2.5,
+    "expected_pct": 10.6,
+    "confidence": 90,
+    "setup": "Momentum rally: +7.6% in 4 bars, RSI 73.6",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
