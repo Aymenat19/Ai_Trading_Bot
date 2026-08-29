@@ -7623,5 +7623,30 @@
     "outcome_pct": -4.1,
     "resolved_at": "2026-08-28T20:35:34.236775+00:00",
     "notes": ""
+  },
+  {
+    "id": "8e6206d0",
+    "logged_at": "2026-08-29T14:50:49.252750+00:00",
+    "market": "CRYPTO",
+    "symbol": "TWT/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.491408,
+    "entry_high": 0.492392,
+    "stop": 0.472968,
+    "targets": [
+      0.515565,
+      0.539231
+    ],
+    "tp1": 0.515565,
+    "tp2": 0.539231,
+    "rr": 2.5,
+    "expected_pct": 9.6,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.7% in 4 bars, RSI 72.0",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
