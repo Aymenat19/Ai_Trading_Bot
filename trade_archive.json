@@ -7673,5 +7673,30 @@
     "outcome_pct": -3.9,
     "resolved_at": "2026-08-29T21:10:49.732080+00:00",
     "notes": ""
+  },
+  {
+    "id": "095b4388",
+    "logged_at": "2026-08-30T06:47:22.644195+00:00",
+    "market": "CRYPTO",
+    "symbol": "ZKP/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.054146,
+    "entry_high": 0.054254,
+    "stop": 0.050957,
+    "targets": [
+      0.062,
+      0.072
+    ],
+    "tp1": 0.062,
+    "tp2": 0.072,
+    "rr": 5.49,
+    "expected_pct": 32.8,
+    "confidence": 76,
+    "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
