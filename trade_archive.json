@@ -7723,5 +7723,30 @@
     "outcome_pct": 4.6,
     "resolved_at": "2026-08-30T18:06:22.515741+00:00",
     "notes": ""
+  },
+  {
+    "id": "0707ea90",
+    "logged_at": "2026-08-30T21:16:19.778230+00:00",
+    "market": "CRYPTO",
+    "symbol": "AUCTION/USDT",
+    "action": "BUY",
+    "exchange": "Kraken",
+    "entry_low": 3.863133,
+    "entry_high": 3.870867,
+    "stop": 3.66784,
+    "targets": [
+      4.358,
+      4.98
+    ],
+    "tp1": 4.358,
+    "tp2": 4.98,
+    "rr": 5.59,
+    "expected_pct": 28.8,
+    "confidence": 74,
+    "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
