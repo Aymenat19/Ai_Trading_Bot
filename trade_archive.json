@@ -7848,5 +7848,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "268143fd",
+    "logged_at": "2026-08-31T16:42:04.744928+00:00",
+    "market": "CRYPTO",
+    "symbol": "DASH/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 45.93402,
+    "entry_high": 46.02598,
+    "stop": 43.742244,
+    "targets": [
+      48.777195,
+      51.57439
+    ],
+    "tp1": 48.777195,
+    "tp2": 51.57439,
+    "rr": 2.5,
+    "expected_pct": 12.2,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.9% in 4 bars, RSI 70.1",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
