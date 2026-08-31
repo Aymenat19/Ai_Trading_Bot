@@ -7773,5 +7773,30 @@
     "outcome_pct": -6.5,
     "resolved_at": "2026-08-30T23:25:39.049855+00:00",
     "notes": ""
+  },
+  {
+    "id": "5a186b1e",
+    "logged_at": "2026-08-31T10:19:02.142962+00:00",
+    "market": "CRYPTO",
+    "symbol": "HEMI/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.015325,
+    "entry_high": 0.015355,
+    "stop": 0.014392,
+    "targets": [
+      0.01687,
+      0.01896
+    ],
+    "tp1": 0.01687,
+    "tp2": 0.01896,
+    "rr": 3.82,
+    "expected_pct": 23.6,
+    "confidence": 87,
+    "setup": "Hot momentum pullback: +30.8% 24h mover, pulled back 9.1% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
