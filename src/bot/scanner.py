@@ -68,14 +68,27 @@ class Idea:
 
 # ─────────────────────────── Data ────────────────────────────────────────────
 
+def _binance_spot_client(timeout: int = 8000):
+    """
+    Shared ccxt.binance() constructor, spot-only. Without options.fetchMarkets
+    restricted like this, ccxt's binance class fetches futures/delivery market
+    data (fapi/dapi endpoints) alongside spot on every load_markets() call —
+    those derivative endpoints are geofenced for many cloud-hosting IP ranges
+    (e.g. Streamlit Community Cloud) even when spot access works fine, which
+    surfaced as "Could not load top markets: ... dapi.binance.com ..." errors.
+    This bot is spot-only and never needs futures/delivery data anyway.
+    """
+    return ccxt.binance({
+        "enableRateLimit": True,
+        "timeout": timeout,
+        "options": {"defaultType": "spot", "fetchMarkets": ["spot"]},
+    })
+
+
 def fetch_crypto_ohlcv(symbol: str, timeframe: str = "1h", limit: int = 500) -> pd.DataFrame:
     if ccxt is None:
         raise RuntimeError("ccxt not installed; install ccxt to fetch crypto data.")
-    ex = ccxt.binance({
-        "enableRateLimit": True,
-        "timeout": 8000,
-        "options": {"defaultType": "spot"},
-    })
+    ex = _binance_spot_client()
     ohlcv = ex.fetch_ohlcv(symbol, timeframe=timeframe, limit=limit)
     df = pd.DataFrame(ohlcv, columns=["ts", "open", "high", "low", "close", "volume"])
     df["ts"] = pd.to_datetime(df["ts"], unit="ms", utc=True)
@@ -90,11 +103,7 @@ def fetch_crypto_ohlcv_history(symbol: str, timeframe: str = "1h", days: int = 1
     """
     if ccxt is None:
         raise RuntimeError("ccxt not installed; install ccxt to fetch crypto data.")
-    ex = ccxt.binance({
-        "enableRateLimit": True,
-        "timeout": 8000,
-        "options": {"defaultType": "spot"},
-    })
+    ex = _binance_spot_client()
     tf_ms = {"1h": 3_600_000, "4h": 14_400_000, "1d": 86_400_000}.get(timeframe, 3_600_000)
     since = int(time.time() * 1000) - days * 86_400_000
     all_rows: List[list] = []
@@ -119,11 +128,7 @@ def fetch_crypto_ohlcv_history(symbol: str, timeframe: str = "1h", days: int = 1
 def top_binance_spot_symbols(quote: str = "USDT", limit: Optional[int] = 50) -> List[str]:
     if ccxt is None:
         raise RuntimeError("ccxt not installed; install ccxt to load Binance markets.")
-    ex = ccxt.binance({
-        "enableRateLimit": True,
-        "timeout": 8000,
-        "options": {"defaultType": "spot"},
-    })
+    ex = _binance_spot_client()
     markets = ex.load_markets()
     pairs = []
     for m in markets.values():
@@ -161,11 +166,7 @@ def find_steady_climbers(
     if ccxt is None:
         return []
     try:
-        ex = ccxt.binance({
-            "enableRateLimit": True,
-            "timeout": 10000,
-            "options": {"defaultType": "spot"},
-        })
+        ex = _binance_spot_client(timeout=10000)
 
         # Single API call — fetches all tickers at once (very fast)
         tickers = ex.fetch_tickers()
@@ -290,11 +291,13 @@ def _load_exchange_symbols(exchange_id: str, quote: str = "USDT") -> set:
         return set()
 
     try:
-        ex_cls = getattr(ccxt, exchange_id, None)
-        if ex_cls is None:
-            return set()
-
-        ex = ex_cls({"enableRateLimit": True, "timeout": 8000})
+        if exchange_id == "binance":
+            ex = _binance_spot_client()
+        else:
+            ex_cls = getattr(ccxt, exchange_id, None)
+            if ex_cls is None:
+                return set()
+            ex = ex_cls({"enableRateLimit": True, "timeout": 8000})
         markets = ex.load_markets()
 
         symbols = set()
