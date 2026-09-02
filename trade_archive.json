@@ -7998,5 +7998,30 @@
     "outcome_pct": -4.0,
     "resolved_at": "2026-09-02T11:13:05.452396+00:00",
     "notes": ""
+  },
+  {
+    "id": "ef6adc28",
+    "logged_at": "2026-09-02T15:46:01.471372+00:00",
+    "market": "CRYPTO",
+    "symbol": "T/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.005245,
+    "entry_high": 0.005255,
+    "stop": 0.005021,
+    "targets": [
+      0.0062,
+      0.00724
+    ],
+    "tp1": 0.0062,
+    "tp2": 0.00724,
+    "rr": 8.71,
+    "expected_pct": 37.9,
+    "confidence": 85,
+    "setup": "Hot momentum pullback: +43.4% 24h mover, pulled back 15.3% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
