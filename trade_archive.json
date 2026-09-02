@@ -7973,5 +7973,30 @@
     "outcome_pct": 5.8,
     "resolved_at": "2026-09-02T08:04:37.543131+00:00",
     "notes": ""
+  },
+  {
+    "id": "f0aa24f3",
+    "logged_at": "2026-09-02T10:55:15.209897+00:00",
+    "market": "CRYPTO",
+    "symbol": "TLM/USDT",
+    "action": "ADD",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.001548,
+    "entry_high": 0.001552,
+    "stop": 0.001486,
+    "targets": [
+      0.00163,
+      0.00171
+    ],
+    "tp1": 0.00163,
+    "tp2": 0.00171,
+    "rr": 2.5,
+    "expected_pct": 10.3,
+    "confidence": 90,
+    "setup": "Momentum rally: +6.0% in 4 bars, RSI 73.9",
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.0,
+    "resolved_at": "2026-09-02T11:13:05.452396+00:00",
+    "notes": ""
   }
 ]
