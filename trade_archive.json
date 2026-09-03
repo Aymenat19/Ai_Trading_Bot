@@ -8098,5 +8098,30 @@
     "outcome_pct": 6.2,
     "resolved_at": "2026-09-03T07:45:53.876611+00:00",
     "notes": ""
+  },
+  {
+    "id": "31f80c4e",
+    "logged_at": "2026-09-03T15:42:50.033641+00:00",
+    "market": "CRYPTO",
+    "symbol": "ZRO/USDT",
+    "action": "ADD",
+    "exchange": "Binance, Kraken",
+    "entry_low": 1.109889,
+    "entry_high": 1.112111,
+    "stop": 1.064989,
+    "targets": [
+      1.168514,
+      1.226028
+    ],
+    "tp1": 1.168514,
+    "tp2": 1.226028,
+    "rr": 2.5,
+    "expected_pct": 10.4,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.4% in 4 bars, RSI 70.4",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
