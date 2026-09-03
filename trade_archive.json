@@ -8023,5 +8023,80 @@
     "outcome_pct": -4.3,
     "resolved_at": "2026-09-02T17:18:35.773194+00:00",
     "notes": ""
+  },
+  {
+    "id": "1e0113cb",
+    "logged_at": "2026-09-03T01:23:35.514755+00:00",
+    "market": "CRYPTO",
+    "symbol": "AR/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 2.425572,
+    "entry_high": 2.430428,
+    "stop": 2.329802,
+    "targets": [
+      2.550747,
+      2.673495
+    ],
+    "tp1": 2.550747,
+    "tp2": 2.673495,
+    "rr": 2.5,
+    "expected_pct": 10.1,
+    "confidence": 82,
+    "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
+    "outcome": "HIT_TP1",
+    "outcome_pct": 5.2,
+    "resolved_at": "2026-09-03T07:27:15.255375+00:00",
+    "notes": ""
+  },
+  {
+    "id": "07b08242",
+    "logged_at": "2026-09-03T01:23:35.514847+00:00",
+    "market": "CRYPTO",
+    "symbol": "EGLD/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 4.942053,
+    "entry_high": 4.951947,
+    "stop": 4.648382,
+    "targets": [
+      5.5,
+      6.269
+    ],
+    "tp1": 5.5,
+    "tp2": 6.269,
+    "rr": 4.43,
+    "expected_pct": 26.7,
+    "confidence": 76,
+    "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "0ca6c008",
+    "logged_at": "2026-09-03T01:23:35.514928+00:00",
+    "market": "CRYPTO",
+    "symbol": "MUBARAK/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.027662,
+    "entry_high": 0.027718,
+    "stop": 0.026388,
+    "targets": [
+      0.02939,
+      0.03191
+    ],
+    "tp1": 0.02939,
+    "tp2": 0.03191,
+    "rr": 3.24,
+    "expected_pct": 15.2,
+    "confidence": 75,
+    "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
+    "outcome": "HIT_TP1",
+    "outcome_pct": 6.2,
+    "resolved_at": "2026-09-03T07:45:53.876611+00:00",
+    "notes": ""
   }
 ]
