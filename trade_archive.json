@@ -8119,9 +8119,9 @@
     "expected_pct": 10.4,
     "confidence": 87,
     "setup": "Momentum rally: +5.4% in 4 bars, RSI 70.4",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.0,
+    "resolved_at": "2026-09-04T14:25:40.025102+00:00",
     "notes": ""
   },
   {
@@ -8197,6 +8197,56 @@
     "outcome": "STOPPED_OUT",
     "outcome_pct": -3.4,
     "resolved_at": "2026-09-04T06:44:15.967400+00:00",
+    "notes": ""
+  },
+  {
+    "id": "cc24c38f",
+    "logged_at": "2026-09-04T14:35:31.190731+00:00",
+    "market": "CRYPTO",
+    "symbol": "SNXXB/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 16.22376,
+    "entry_high": 16.25624,
+    "stop": 15.469942,
+    "targets": [
+      17.202572,
+      18.165144
+    ],
+    "tp1": 17.202572,
+    "tp2": 18.165144,
+    "rr": 2.5,
+    "expected_pct": 11.9,
+    "confidence": 90,
+    "setup": "Momentum rally: +10.0% in 4 bars, RSI 75.5",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "4cf994d8",
+    "logged_at": "2026-09-04T14:35:31.190919+00:00",
+    "market": "CRYPTO",
+    "symbol": "SNDKB/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 1675.46286,
+    "entry_high": 1678.81714,
+    "stop": 1633.551062,
+    "targets": [
+      1731.626173,
+      1786.112346
+    ],
+    "tp1": 1731.626173,
+    "tp2": 1786.112346,
+    "rr": 2.5,
+    "expected_pct": 6.5,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.1% in 4 bars, RSI 76.0",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
     "notes": ""
   }
 ]
