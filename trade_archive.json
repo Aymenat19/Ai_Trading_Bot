@@ -8148,5 +8148,30 @@
     "outcome_pct": -3.8,
     "resolved_at": "2026-09-04T01:19:44.351637+00:00",
     "notes": ""
+  },
+  {
+    "id": "c6ba4cc1",
+    "logged_at": "2026-09-04T04:59:29.950190+00:00",
+    "market": "CRYPTO",
+    "symbol": "ZEN/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 6.260733,
+    "entry_high": 6.273267,
+    "stop": 6.004813,
+    "targets": [
+      6.594733,
+      6.922466
+    ],
+    "tp1": 6.594733,
+    "tp2": 6.922466,
+    "rr": 2.5,
+    "expected_pct": 10.5,
+    "confidence": 79,
+    "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
