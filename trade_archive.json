@@ -8323,5 +8323,30 @@
     "outcome_pct": -4.0,
     "resolved_at": "2026-09-05T09:43:37.719374+00:00",
     "notes": ""
+  },
+  {
+    "id": "63f67c01",
+    "logged_at": "2026-09-05T12:39:47.612201+00:00",
+    "market": "CRYPTO",
+    "symbol": "BROCCOLI714/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.020519,
+    "entry_high": 0.020561,
+    "stop": 0.019807,
+    "targets": [
+      0.02241,
+      0.02468
+    ],
+    "tp1": 0.02241,
+    "tp2": 0.02468,
+    "rr": 5.65,
+    "expected_pct": 20.2,
+    "confidence": 87,
+    "setup": "Hot momentum pullback: +15.3% 24h mover, pulled back 8.3% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
