@@ -6,6 +6,7 @@ from typing import List, Tuple, Optional, Dict, Any, Union
 
 import json
 import os
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -68,21 +69,48 @@ class Idea:
 
 # ─────────────────────────── Data ────────────────────────────────────────────
 
+_shared_binance_client = None
+_binance_client_lock = threading.Lock()
+
+
 def _binance_spot_client(timeout: int = 8000):
     """
-    Shared ccxt.binance() constructor, spot-only. Without options.fetchMarkets
-    restricted like this, ccxt's binance class fetches futures/delivery market
-    data (fapi/dapi endpoints) alongside spot on every load_markets() call —
-    those derivative endpoints are geofenced for many cloud-hosting IP ranges
-    (e.g. Streamlit Community Cloud) even when spot access works fine, which
-    surfaced as "Could not load top markets: ... dapi.binance.com ..." errors.
-    This bot is spot-only and never needs futures/delivery data anyway.
+    Shared, reused ccxt.binance() client — spot-only.
+
+    Without options.fetchMarkets restricted like this, ccxt's binance class
+    fetches futures/delivery market data (fapi/dapi endpoints) alongside spot
+    on every load_markets() call — those derivative endpoints are geofenced
+    for many cloud-hosting IP ranges (e.g. Streamlit Community Cloud) even
+    when spot access works fine, which surfaced as "Could not load top
+    markets: ... dapi.binance.com ..." errors. This bot is spot-only and
+    never needs futures/delivery data anyway.
+
+    Reused across every call site (not reconstructed per call) for two
+    reasons: ccxt lazily calls load_markets() on first use of a *fresh*
+    instance, so constructing a new client per fetch_ohlcv() call — which
+    happens once per symbol per timeframe across 8 parallel scan threads,
+    plus once per pending signal during resolve_pending() — silently doubled
+    every real request with an extra full market-list fetch. And each fresh
+    instance's rate limiter starts cold, so parallel threads could burst
+    well past Binance's actual rate limits instead of being throttled
+    together. Sharing one instance makes load_markets() a cache hit after
+    the first call and lets ccxt's enableRateLimit actually pace requests
+    across the whole scan — this was the likely cause of scan cycles
+    stretching to 1-2 hours instead of the expected couple of minutes.
     """
-    return ccxt.binance({
-        "enableRateLimit": True,
-        "timeout": timeout,
-        "options": {"defaultType": "spot", "fetchMarkets": ["spot"]},
-    })
+    global _shared_binance_client
+    if _shared_binance_client is None:
+        with _binance_client_lock:
+            if _shared_binance_client is None:
+                client = ccxt.binance({
+                    "enableRateLimit": True,
+                    "timeout": timeout,
+                    "options": {"defaultType": "spot", "fetchMarkets": ["spot"]},
+                })
+                client.load_markets()
+                _shared_binance_client = client
+    _shared_binance_client.timeout = timeout
+    return _shared_binance_client
 
 
 def fetch_crypto_ohlcv(symbol: str, timeframe: str = "1h", limit: int = 500) -> pd.DataFrame:
