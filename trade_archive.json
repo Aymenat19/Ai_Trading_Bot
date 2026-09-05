@@ -8248,5 +8248,55 @@
     "outcome_pct": 3.4,
     "resolved_at": "2026-09-04T21:54:10.616463+00:00",
     "notes": ""
+  },
+  {
+    "id": "ac3d8db8",
+    "logged_at": "2026-09-05T08:11:58.702630+00:00",
+    "market": "CRYPTO",
+    "symbol": "DASH/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 66.0339,
+    "entry_high": 66.1661,
+    "stop": 64.2899,
+    "targets": [
+      73.8,
+      82.13
+    ],
+    "tp1": 73.8,
+    "tp2": 82.13,
+    "rr": 8.86,
+    "expected_pct": 24.3,
+    "confidence": 87,
+    "setup": "Hot momentum pullback: +31.5% 24h mover, pulled back 10.4% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "9a52a1d5",
+    "logged_at": "2026-09-05T08:18:17.054425+00:00",
+    "market": "CRYPTO",
+    "symbol": "TST/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.01963,
+    "entry_high": 0.01967,
+    "stop": 0.018675,
+    "targets": [
+      0.02106,
+      0.02317
+    ],
+    "tp1": 0.02106,
+    "tp2": 0.02317,
+    "rr": 3.61,
+    "expected_pct": 17.9,
+    "confidence": 84,
+    "setup": "Hot momentum pullback: +15.4% 24h mover, pulled back 6.7% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
