@@ -8398,5 +8398,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "45e944ac",
+    "logged_at": "2026-09-05T20:42:45.762686+00:00",
+    "market": "CRYPTO",
+    "symbol": "AR/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 3.027969,
+    "entry_high": 3.034031,
+    "stop": 2.896979,
+    "targets": [
+      3.164,
+      3.398
+    ],
+    "tp1": 3.164,
+    "tp2": 3.398,
+    "rr": 2.74,
+    "expected_pct": 12.1,
+    "confidence": 82,
+    "setup": "Hot momentum pullback: +17.6% 24h mover, pulled back 4.2% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
