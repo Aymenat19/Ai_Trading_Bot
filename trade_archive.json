@@ -8473,5 +8473,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "ca2cb59c",
+    "logged_at": "2026-09-06T10:32:24.780114+00:00",
+    "market": "CRYPTO",
+    "symbol": "GRT/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.01989,
+    "entry_high": 0.01993,
+    "stop": 0.019385,
+    "targets": [
+      0.02128,
+      0.02297
+    ],
+    "tp1": 0.02128,
+    "tp2": 0.02297,
+    "rr": 5.83,
+    "expected_pct": 15.4,
+    "confidence": 84,
+    "setup": "Hot momentum pullback: +17.4% 24h mover, pulled back 6.4% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
