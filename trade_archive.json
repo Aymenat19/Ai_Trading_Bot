@@ -8448,5 +8448,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "58558351",
+    "logged_at": "2026-09-06T09:34:26.844930+00:00",
+    "market": "CRYPTO",
+    "symbol": "ARB/USDT",
+    "action": "ADD",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.193007,
+    "entry_high": 0.193393,
+    "stop": 0.184709,
+    "targets": [
+      0.2066,
+      0.225
+    ],
+    "tp1": 0.2066,
+    "tp2": 0.225,
+    "rr": 3.75,
+    "expected_pct": 16.5,
+    "confidence": 85,
+    "setup": "Hot momentum pullback: +44.3% 24h mover, pulled back 6.5% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
