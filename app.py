@@ -19,6 +19,7 @@ from bot.scanner import (
     get_new_listings,
     get_btc_dominance,
     session_context,
+    log_funnel_event,
     DEFAULT_SYMBOLS,
     DEFAULT_STOCKS,
 )
@@ -181,10 +182,22 @@ while True:
     # ── Archive: log new BUY signals, auto-resolve pending ───────────────
     archive = load_archive()
     # Cap BUY signals to top 3 per scan (by confidence then R:R) to avoid correlated batch losses
-    _buy_candidates = sorted(
+    _all_buys = sorted(
         [i for i in opp_ideas if i.action == "BUY"],
         key=lambda x: (x.confidence, x.rr or 0), reverse=True
-    )[:3]
+    )
+    _buy_candidates = _all_buys[:3]
+    _cap_dropped = _all_buys[3:]
+    if _cap_dropped:
+        for i in _cap_dropped:
+            log_funnel_event({
+                "event": "cap_dropped",
+                "symbol": i.symbol,
+                "conf": i.confidence,
+                "rr": i.rr,
+                "exp_pct": i.expected_pct,
+                "setup": i.why[0] if i.why else "",
+            })
     _other_signals = [i for i in opp_ideas if i.action != "BUY"]
     new_count = sum(1 for i in _buy_candidates + _other_signals if i.action in ("BUY","ADD") and archive_signal(i, archive))
     resolve_pending(archive)

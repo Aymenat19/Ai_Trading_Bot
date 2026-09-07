@@ -18,6 +18,7 @@ listings_seen.json
 streamlit.log
 sync_archive.log
 nohup.out
+signal_funnel.jsonl
 
 # Build artifacts
 *.egg-info/

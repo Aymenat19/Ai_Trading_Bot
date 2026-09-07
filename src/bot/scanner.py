@@ -27,6 +27,28 @@ from rich.table import Table
 
 console = Console()
 
+FUNNEL_LOG_PATH = "signal_funnel.jsonl"
+
+
+def log_funnel_event(event: Dict[str, Any]) -> None:
+    """
+    Append-only diagnostic log tracking candidates that qualified for a BUY
+    (cleared confidence/RR/expected-move gate) but never reached the archive —
+    either downgraded by a macro veto (BTC downtrend/dominance, funding rate)
+    or crowded out by app.py's top-3-BUYs-per-cycle cap. Investigation on
+    2026-09-07 found real qualifying signals (confluence-passing, no active
+    veto) that still never got archived, with no visibility into why — this
+    makes that funnel visible instead of signals silently vanishing between
+    "detected" and "logged". Local-only (gitignored); never synced or synced
+    to the public viewer. Must never raise — diagnostics can't break a scan.
+    """
+    try:
+        record = {"ts": datetime.now(timezone.utc).isoformat(), **event}
+        with open(FUNNEL_LOG_PATH, "a", encoding="utf-8") as f:
+            f.write(json.dumps(record, default=str) + "\n")
+    except Exception:
+        pass
+
 
 # Default watchlists (spot-only)
 DEFAULT_SYMBOLS = [
@@ -61,6 +83,7 @@ class Idea:
     confidence: int
     why: List[str]
     exchanges: List[str] = None  # e.g. ["Binance", "Kraken"]
+    diagnostics: Optional[Dict[str, Any]] = None  # funnel-tracking: pre-veto state, see _analyse_crypto
 
     def __post_init__(self):
         if self.exchanges is None:
@@ -1784,20 +1807,30 @@ def _analyse_crypto(sym: str, timeframe: str, limit: int, holdings: dict, gain_2
     else:
         action = "HOLD" if holding else "AVOID"
 
+    # Funnel tracking: capture the pre-veto action so app.py can log exactly
+    # which candidates were suppressed by which veto vs. the top-3-per-cycle
+    # cap, instead of just seeing them vanish between "detected" and "archived".
+    pre_veto_action = action
+    vetoes_applied: List[str] = []
+    original_setup = why[0] if why else ""
+
     # BTC downtrend: suppress altcoin longs
     if action == "BUY" and btc_trend == "DOWN" and sym != "BTC/USDT":
         action = "WATCH"
         why = ["BTC in downtrend — BUY downgraded to WATCH"] + why
+        vetoes_applied.append("btc_downtrend")
 
     # BTC dominance rising: capital rotating from alts into BTC
     if action == "BUY" and btc_dom_rising and sym not in ("BTC/USDT", "ETH/USDT"):
         action = "WATCH"
         why = ["BTC dominance rising — altcoin headwind, BUY downgraded to WATCH"] + why
+        vetoes_applied.append("btc_dominance")
 
     # Funding rate: overleveraged longs = squeeze risk
     if funding_rate > 0.001:
         if action == "BUY":
             action = "WATCH"
+            vetoes_applied.append("funding_rate")
         why = [f"⚠ Funding {funding_rate*100:.3f}% (>0.1%) — severe overleverage, squeeze risk"] + why
     elif funding_rate > 0.0005:
         why = [f"⚠ Funding {funding_rate*100:.3f}% (>0.05%) — longs dominant, caution"] + why
@@ -1808,7 +1841,16 @@ def _analyse_crypto(sym: str, timeframe: str, limit: int, holdings: dict, gain_2
     if not is_prime:
         why = [f"Off-peak session ({sess_name}) — confidence penalised, not blocked"] + why
 
-    return Idea("CRYPTO", sym, action, entry, stop, targets or [], rr, exp_pct, conf, why, exchanges)
+    diagnostics = {
+        "pre_veto_action": pre_veto_action,
+        "vetoes_applied": vetoes_applied,
+        "gain_24h_pct": gain_24h_pct,
+        "session": sess_name,
+        "is_prime": is_prime,
+        "setup": original_setup,
+    }
+
+    return Idea("CRYPTO", sym, action, entry, stop, targets or [], rr, exp_pct, conf, why, exchanges, diagnostics)
 
 
 def _analyse_stock(tkr: str, timeframe: str, limit: int, holdings: dict) -> Idea:
@@ -1930,6 +1972,25 @@ def scan_spot_and_stocks(
         return (actionable, i.confidence, rr_val)
 
     ideas.sort(key=score, reverse=True)
+
+    # Funnel diagnostics: log any candidate that qualified as a BUY pre-veto
+    # but got downgraded — see log_funnel_event() docstring for why this exists.
+    for i in ideas:
+        d = i.diagnostics
+        if d and d.get("pre_veto_action") == "BUY" and i.action != "BUY":
+            log_funnel_event({
+                "event": "veto_dropped",
+                "symbol": i.symbol,
+                "vetoes": d.get("vetoes_applied", []),
+                "final_action": i.action,
+                "conf": i.confidence,
+                "rr": i.rr,
+                "exp_pct": i.expected_pct,
+                "setup": d.get("setup", ""),
+                "gain_24h_pct": d.get("gain_24h_pct"),
+                "session": d.get("session"),
+            })
+
     return ideas
 
 
