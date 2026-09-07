@@ -8419,9 +8419,9 @@
     "expected_pct": 12.1,
     "confidence": 82,
     "setup": "Hot momentum pullback: +17.6% 24h mover, pulled back 4.2% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.3,
+    "resolved_at": "2026-09-06T18:45:00.368519+00:00",
     "notes": ""
   },
   {
@@ -8444,9 +8444,9 @@
     "expected_pct": 20.3,
     "confidence": 77,
     "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -5.5,
+    "resolved_at": "2026-09-06T13:47:41.322487+00:00",
     "notes": ""
   },
   {
@@ -8469,9 +8469,9 @@
     "expected_pct": 16.5,
     "confidence": 85,
     "setup": "Hot momentum pullback: +44.3% 24h mover, pulled back 6.5% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.3,
+    "resolved_at": "2026-09-06T18:45:00.961325+00:00",
     "notes": ""
   },
   {
@@ -8494,6 +8494,31 @@
     "expected_pct": 15.4,
     "confidence": 84,
     "setup": "Hot momentum pullback: +17.4% 24h mover, pulled back 6.4% from high",
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -2.5,
+    "resolved_at": "2026-09-06T13:47:42.193237+00:00",
+    "notes": ""
+  },
+  {
+    "id": "9cc5a131",
+    "logged_at": "2026-09-06T20:13:13.247078+00:00",
+    "market": "CRYPTO",
+    "symbol": "LAYER/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.076923,
+    "entry_high": 0.077077,
+    "stop": 0.073848,
+    "targets": [
+      0.0901,
+      0.1052
+    ],
+    "tp1": 0.0901,
+    "tp2": 0.1052,
+    "rr": 8.95,
+    "expected_pct": 36.6,
+    "confidence": 87,
+    "setup": "Hot momentum pullback: +18.2% 24h mover, pulled back 14.5% from high",
     "outcome": "PENDING",
     "outcome_pct": null,
     "resolved_at": null,
