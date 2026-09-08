@@ -8523,5 +8523,30 @@
     "outcome_pct": -4.0,
     "resolved_at": "2026-09-07T12:11:25.965868+00:00",
     "notes": ""
+  },
+  {
+    "id": "a652e93f",
+    "logged_at": "2026-09-08T12:49:01.490589+00:00",
+    "market": "CRYPTO",
+    "symbol": "ATOM/USDT",
+    "action": "ADD",
+    "exchange": "Binance, Kraken",
+    "entry_low": 1.756242,
+    "entry_high": 1.759758,
+    "stop": 1.710734,
+    "targets": [
+      1.817083,
+      1.876165
+    ],
+    "tp1": 1.817083,
+    "tp2": 1.876165,
+    "rr": 2.5,
+    "expected_pct": 6.7,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.6% in 4 bars, RSI 77.9",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
