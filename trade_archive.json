@@ -8573,5 +8573,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "23292dce",
+    "logged_at": "2026-09-09T08:59:32.062386+00:00",
+    "market": "CRYPTO",
+    "symbol": "GPS/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.012278,
+    "entry_high": 0.012302,
+    "stop": 0.011742,
+    "targets": [
+      0.012975,
+      0.013661
+    ],
+    "tp1": 0.012975,
+    "tp2": 0.013661,
+    "rr": 2.5,
+    "expected_pct": 11.2,
+    "confidence": 84,
+    "setup": "Momentum rally: +5.3% in 4 bars, RSI 72.6",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
