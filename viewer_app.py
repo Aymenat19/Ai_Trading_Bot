@@ -17,6 +17,7 @@ import streamlit as st
 sys.path.insert(0, os.path.abspath("src"))
 
 from bot.archive_store import (  # noqa: E402
+    format_local_time,
     load_archive,
     normalize_setup_key,
     outcome_badge,
@@ -41,7 +42,7 @@ if not archive:
 
 if os.path.exists("trade_archive.json"):
     synced_at = pd.Timestamp(os.path.getmtime("trade_archive.json"), unit="s", tz="UTC")
-    st.caption(f"Archive last updated: {synced_at.strftime('%Y-%m-%d %H:%M UTC')}")
+    st.caption(f"Archive last updated: {synced_at.tz_convert('Europe/Berlin').strftime('%Y-%m-%d %H:%M')}")
 
 stats = reliability_stats(archive)
 c1, c2, c3, c4, c5 = st.columns(5)
@@ -66,7 +67,7 @@ if not filtered:
 else:
     st.dataframe(pd.DataFrame([{
         "ID":        r["id"],
-        "Logged":    r["logged_at"][:16].replace("T", " "),
+        "Logged":    format_local_time(r["logged_at"]),
         "Symbol":    r["symbol"],
         "Exchange":  r["exchange"],
         "Action":    r["action"],
@@ -78,7 +79,7 @@ else:
         "Conf":      r["confidence"],
         "Outcome":   outcome_badge(r["outcome"]),
         "Result %":  r["outcome_pct"],
-        "Resolved":  (r["resolved_at"] or "")[:16].replace("T", " "),
+        "Resolved":  format_local_time(r["resolved_at"]),
         "Setup":     r["setup"][:45] if r["setup"] else "",
         "Notes":     r["notes"],
     } for r in filtered]), use_container_width=True, hide_index=True)

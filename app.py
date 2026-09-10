@@ -31,6 +31,7 @@ from bot.archive_store import (
     normalize_setup_key,
     reliability_stats,
     outcome_badge,
+    format_local_time,
 )
 
 st.set_page_config(page_title="Portfolio Advisor", layout="wide")
@@ -386,7 +387,7 @@ while True:
                     sel_id  = st.selectbox("Signal ID", [r["id"] for r in pending], key=f"sel_id_{_k}")
                     sel_rec = next((r for r in pending if r["id"] == sel_id), None)
                     if sel_rec:
-                        st.write(f"**{sel_rec['symbol']}** | Logged: {sel_rec['logged_at'][:16]} | "
+                        st.write(f"**{sel_rec['symbol']}** | Logged: {format_local_time(sel_rec['logged_at'])} | "
                                  f"Entry: {sel_rec['entry_low']} | TP1: {sel_rec['tp1']} | "
                                  f"TP2: {sel_rec['tp2']} | Stop: {sel_rec['stop']}")
                     mc1, mc2, mc3, mc4 = st.columns(4)
@@ -438,7 +439,7 @@ while True:
             else:
                 st.dataframe(pd.DataFrame([{
                     "ID":        r["id"],
-                    "Logged":    r["logged_at"][:16].replace("T"," "),
+                    "Logged":    format_local_time(r["logged_at"]),
                     "Symbol":    r["symbol"],
                     "Exchange":  r["exchange"],
                     "Action":    r["action"],
@@ -450,7 +451,7 @@ while True:
                     "Conf":      r["confidence"],
                     "Outcome":   outcome_badge(r["outcome"]),
                     "Result %":  r["outcome_pct"],
-                    "Resolved":  (r["resolved_at"] or "")[:16].replace("T"," "),
+                    "Resolved":  format_local_time(r["resolved_at"]),
                     "Setup":     r["setup"][:45] if r["setup"] else "",
                     "Notes":     r["notes"],
                 } for r in filtered]), use_container_width=True, hide_index=True)

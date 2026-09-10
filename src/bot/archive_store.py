@@ -9,8 +9,31 @@ import json
 import time
 import uuid
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 ARCHIVE_PATH = "trade_archive.json"
+
+# Display-only timezone. All storage/internal logic (session_context()'s
+# off-peak window, dedup/blacklist cutoffs, resolve_pending) stays UTC —
+# this only affects what logged_at/resolved_at render as in the UI tables,
+# since a UTC timestamp with no timezone label reads as confusing/wrong
+# to a viewer in a different zone (e.g. "8:00" logged when their clock and
+# the browser both say "10:08", Berlin being UTC+2 in September/CEST).
+DISPLAY_TZ = ZoneInfo("Europe/Berlin")
+
+
+def format_local_time(iso_str: str, fmt: str = "%Y-%m-%d %H:%M") -> str:
+    """Convert a stored UTC ISO timestamp to DISPLAY_TZ for display. zoneinfo
+    handles the CEST/CET DST transition automatically — no fixed offset."""
+    if not iso_str:
+        return ""
+    try:
+        dt = datetime.fromisoformat(iso_str)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(DISPLAY_TZ).strftime(fmt)
+    except (ValueError, TypeError):
+        return iso_str[:16].replace("T", " ")  # fallback: raw UTC string
 
 
 def load_archive(path: str = ARCHIVE_PATH) -> list:
