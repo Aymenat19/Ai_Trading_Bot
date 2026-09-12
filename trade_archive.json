@@ -8673,5 +8673,30 @@
     "outcome_pct": 4.0,
     "resolved_at": "2026-09-09T15:15:22.270863+00:00",
     "notes": ""
+  },
+  {
+    "id": "e36e3fa3",
+    "logged_at": "2026-09-12T17:11:49.064710+00:00",
+    "market": "CRYPTO",
+    "symbol": "PHA/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.027173,
+    "entry_high": 0.027227,
+    "stop": 0.026265,
+    "targets": [
+      0.028368,
+      0.029537
+    ],
+    "tp1": 0.028368,
+    "tp2": 0.029537,
+    "rr": 2.5,
+    "expected_pct": 8.6,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.0% in 4 bars, RSI 72.8",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
