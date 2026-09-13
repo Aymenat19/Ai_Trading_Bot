@@ -8748,5 +8748,55 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "14f6d2d5",
+    "logged_at": "2026-09-13T14:39:40.899026+00:00",
+    "market": "CRYPTO",
+    "symbol": "BABY/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.012827,
+    "entry_high": 0.012853,
+    "stop": 0.012382,
+    "targets": [
+      0.013413,
+      0.013985
+    ],
+    "tp1": 0.013413,
+    "tp2": 0.013985,
+    "rr": 2.5,
+    "expected_pct": 8.9,
+    "confidence": 90,
+    "setup": "Momentum rally: +6.5% in 4 bars, RSI 76.6",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "29752643",
+    "logged_at": "2026-09-13T14:39:40.899184+00:00",
+    "market": "CRYPTO",
+    "symbol": "XTZ/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.27952,
+    "entry_high": 0.28008,
+    "stop": 0.269312,
+    "targets": [
+      0.29291,
+      0.306019
+    ],
+    "tp1": 0.29291,
+    "tp2": 0.306019,
+    "rr": 2.5,
+    "expected_pct": 9.4,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.7% in 4 bars, RSI 67.9",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
