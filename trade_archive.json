@@ -8723,5 +8723,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "f343e655",
+    "logged_at": "2026-09-13T14:17:07.631139+00:00",
+    "market": "CRYPTO",
+    "symbol": "POLYX/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.042058,
+    "entry_high": 0.042142,
+    "stop": 0.039656,
+    "targets": [
+      0.0492,
+      0.0581
+    ],
+    "tp1": 0.0492,
+    "tp2": 0.0581,
+    "rr": 6.55,
+    "expected_pct": 38.0,
+    "confidence": 82,
+    "setup": "Hot momentum pullback: +16.9% 24h mover, pulled back 14.4% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
