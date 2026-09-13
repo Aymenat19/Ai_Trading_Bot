@@ -8798,5 +8798,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "04f22d8e",
+    "logged_at": "2026-09-13T14:45:21.124419+00:00",
+    "market": "CRYPTO",
+    "symbol": "BAT/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.082218,
+    "entry_high": 0.082382,
+    "stop": 0.079066,
+    "targets": [
+      0.086343,
+      0.090385
+    ],
+    "tp1": 0.086343,
+    "tp2": 0.090385,
+    "rr": 2.5,
+    "expected_pct": 9.8,
+    "confidence": 84,
+    "setup": "Momentum rally: +5.8% in 4 bars, RSI 75.8",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
