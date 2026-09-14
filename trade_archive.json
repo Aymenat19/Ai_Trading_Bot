@@ -8944,9 +8944,9 @@
     "expected_pct": 10.2,
     "confidence": 90,
     "setup": "Momentum rally: +10.0% in 4 bars, RSI 77.7",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.0,
+    "resolved_at": "2026-09-14T19:17:14.068886+00:00",
     "notes": ""
   }
 ]
