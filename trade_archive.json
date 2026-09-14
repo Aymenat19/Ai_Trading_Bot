@@ -8923,5 +8923,30 @@
     "outcome_pct": 3.4,
     "resolved_at": "2026-09-14T17:33:30.659088+00:00",
     "notes": ""
+  },
+  {
+    "id": "becc5341",
+    "logged_at": "2026-09-14T18:16:49.709790+00:00",
+    "market": "CRYPTO",
+    "symbol": "SENT/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.016563,
+    "entry_high": 0.016597,
+    "stop": 0.015903,
+    "targets": [
+      0.017426,
+      0.018272
+    ],
+    "tp1": 0.017426,
+    "tp2": 0.018272,
+    "rr": 2.5,
+    "expected_pct": 10.2,
+    "confidence": 90,
+    "setup": "Momentum rally: +10.0% in 4 bars, RSI 77.7",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
