@@ -8948,5 +8948,55 @@
     "outcome_pct": -4.0,
     "resolved_at": "2026-09-14T19:17:14.068886+00:00",
     "notes": ""
+  },
+  {
+    "id": "a1aa98f6",
+    "logged_at": "2026-09-14T20:49:36.422827+00:00",
+    "market": "CRYPTO",
+    "symbol": "STRK/USDT",
+    "action": "ADD",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.0301,
+    "entry_high": 0.03016,
+    "stop": 0.029296,
+    "targets": [
+      0.031172,
+      0.032214
+    ],
+    "tp1": 0.031172,
+    "tp2": 0.032214,
+    "rr": 2.5,
+    "expected_pct": 6.9,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.2% in 4 bars, RSI 72.8",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "77dc1eff",
+    "logged_at": "2026-09-14T20:59:53.997024+00:00",
+    "market": "CRYPTO",
+    "symbol": "ZEC/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 1198.8,
+    "entry_high": 1201.2,
+    "stop": 1152.65521,
+    "targets": [
+      1259.180987,
+      1318.361974
+    ],
+    "tp1": 1259.180987,
+    "tp2": 1318.361974,
+    "rr": 2.5,
+    "expected_pct": 9.9,
+    "confidence": 84,
+    "setup": "Momentum rally: +5.4% in 4 bars, RSI 71.4",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
