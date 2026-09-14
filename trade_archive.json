@@ -8898,5 +8898,30 @@
     "outcome_pct": -4.8,
     "resolved_at": "2026-09-14T12:03:27.047951+00:00",
     "notes": ""
+  },
+  {
+    "id": "90510a78",
+    "logged_at": "2026-09-14T14:54:53.782419+00:00",
+    "market": "CRYPTO",
+    "symbol": "COINB/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 186.37344,
+    "entry_high": 186.74656,
+    "stop": 181.703316,
+    "targets": [
+      192.630855,
+      198.701711
+    ],
+    "tp1": 192.630855,
+    "tp2": 198.701711,
+    "rr": 2.5,
+    "expected_pct": 6.5,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.4% in 4 bars, RSI 77.0",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
