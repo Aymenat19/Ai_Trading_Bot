@@ -8844,9 +8844,59 @@
     "expected_pct": 10.7,
     "confidence": 87,
     "setup": "Momentum rally: +5.1% in 4 bars, RSI 67.6",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "HIT_TP1",
+    "outcome_pct": 5.5,
+    "resolved_at": "2026-09-14T12:03:26.441509+00:00",
+    "notes": ""
+  },
+  {
+    "id": "e3c8937e",
+    "logged_at": "2026-09-14T10:59:52.388743+00:00",
+    "market": "CRYPTO",
+    "symbol": "IOTA/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.044356,
+    "entry_high": 0.044444,
+    "stop": 0.042992,
+    "targets": [
+      0.04616,
+      0.047921
+    ],
+    "tp1": 0.04616,
+    "tp2": 0.047921,
+    "rr": 2.5,
+    "expected_pct": 7.9,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.7% in 4 bars, RSI 73.9",
+    "outcome": "HIT_TP1",
+    "outcome_pct": 4.1,
+    "resolved_at": "2026-09-14T12:03:26.747946+00:00",
+    "notes": ""
+  },
+  {
+    "id": "7aff108d",
+    "logged_at": "2026-09-14T11:20:16.811491+00:00",
+    "market": "CRYPTO",
+    "symbol": "BANK/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.031269,
+    "entry_high": 0.031331,
+    "stop": 0.029753,
+    "targets": [
+      0.033233,
+      0.035167
+    ],
+    "tp1": 0.033233,
+    "tp2": 0.035167,
+    "rr": 2.5,
+    "expected_pct": 12.4,
+    "confidence": 88,
+    "setup": "Momentum rally: +8.7% in 4 bars, RSI 78.0",
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.8,
+    "resolved_at": "2026-09-14T12:03:27.047951+00:00",
     "notes": ""
   }
 ]
