@@ -9048,5 +9048,30 @@
     "outcome_pct": -3.7,
     "resolved_at": "2026-09-17T12:40:20.823068+00:00",
     "notes": ""
+  },
+  {
+    "id": "b93286dd",
+    "logged_at": "2026-09-17T14:39:58.873512+00:00",
+    "market": "CRYPTO",
+    "symbol": "UNI/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 7.335657,
+    "entry_high": 7.350343,
+    "stop": 6.988198,
+    "targets": [
+      7.786502,
+      8.230004
+    ],
+    "tp1": 7.786502,
+    "tp2": 8.230004,
+    "rr": 2.5,
+    "expected_pct": 12.1,
+    "confidence": 90,
+    "setup": "Momentum rally: +7.2% in 4 bars, RSI 73.8",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
