@@ -8998,5 +8998,30 @@
     "outcome_pct": -3.8,
     "resolved_at": "2026-09-15T01:16:17.367199+00:00",
     "notes": ""
+  },
+  {
+    "id": "373a8ef3",
+    "logged_at": "2026-09-17T09:50:51.036265+00:00",
+    "market": "CRYPTO",
+    "symbol": "GALA/USDT",
+    "action": "ADD",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.001728,
+    "entry_high": 0.001732,
+    "stop": 0.001684,
+    "targets": [
+      0.001788,
+      0.001845
+    ],
+    "tp1": 0.001788,
+    "tp2": 0.001845,
+    "rr": 2.5,
+    "expected_pct": 6.6,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.1% in 4 bars, RSI 76.2",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
