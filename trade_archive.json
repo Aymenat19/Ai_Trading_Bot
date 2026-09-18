@@ -9248,5 +9248,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "6eb4548f",
+    "logged_at": "2026-09-18T11:35:49.275344+00:00",
+    "market": "CRYPTO",
+    "symbol": "RAY/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 1.702396,
+    "entry_high": 1.705804,
+    "stop": 1.658341,
+    "targets": [
+      1.85,
+      2.0196
+    ],
+    "tp1": 1.85,
+    "tp2": 2.0196,
+    "rr": 6.89,
+    "expected_pct": 18.5,
+    "confidence": 82,
+    "setup": "Hot momentum pullback: +17.0% 24h mover, pulled back 7.9% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
