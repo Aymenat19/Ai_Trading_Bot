@@ -9373,5 +9373,55 @@
     "outcome_pct": 14.8,
     "resolved_at": "2026-09-19T21:51:17.982788+00:00",
     "notes": ""
+  },
+  {
+    "id": "66d071f8",
+    "logged_at": "2026-09-20T10:50:02.692162+00:00",
+    "market": "CRYPTO",
+    "symbol": "ZIL/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.003777,
+    "entry_high": 0.003785,
+    "stop": 0.003568,
+    "targets": [
+      0.004652,
+      0.005638
+    ],
+    "tp1": 0.004652,
+    "tp2": 0.005638,
+    "rr": 8.72,
+    "expected_pct": 49.1,
+    "confidence": 87,
+    "setup": "Hot momentum pullback: +18.4% 24h mover, pulled back 18.7% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "fa9c9f90",
+    "logged_at": "2026-09-20T10:55:23.754097+00:00",
+    "market": "CRYPTO",
+    "symbol": "FET/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.16993,
+    "entry_high": 0.17027,
+    "stop": 0.165683,
+    "targets": [
+      0.17413,
+      0.18169
+    ],
+    "tp1": 0.17413,
+    "tp2": 0.18169,
+    "rr": 2.62,
+    "expected_pct": 6.8,
+    "confidence": 81,
+    "setup": "Range bounce: 9.2% channel, price at support 0.1672",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
