@@ -9498,5 +9498,55 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "059d77b7",
+    "logged_at": "2026-09-20T17:18:46.232271+00:00",
+    "market": "CRYPTO",
+    "symbol": "CFX/USDT",
+    "action": "ADD",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.052128,
+    "entry_high": 0.052232,
+    "stop": 0.050534,
+    "targets": [
+      0.054238,
+      0.056295
+    ],
+    "tp1": 0.054238,
+    "tp2": 0.056295,
+    "rr": 2.5,
+    "expected_pct": 7.9,
+    "confidence": 88,
+    "setup": "Momentum rally: +6.2% in 4 bars, RSI 65.5",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "c9a75376",
+    "logged_at": "2026-09-20T17:23:56.522217+00:00",
+    "market": "CRYPTO",
+    "symbol": "ATOM/USDT",
+    "action": "ADD",
+    "exchange": "Binance, Kraken",
+    "entry_low": 1.76823,
+    "entry_high": 1.77177,
+    "stop": 1.721528,
+    "targets": [
+      1.830589,
+      1.891179
+    ],
+    "tp1": 1.830589,
+    "tp2": 1.891179,
+    "rr": 2.5,
+    "expected_pct": 6.8,
+    "confidence": 84,
+    "setup": "Momentum rally: +5.2% in 4 bars, RSI 65.5",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
