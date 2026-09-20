@@ -9394,9 +9394,9 @@
     "expected_pct": 49.1,
     "confidence": 87,
     "setup": "Hot momentum pullback: +18.4% 24h mover, pulled back 18.7% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -5.5,
+    "resolved_at": "2026-09-20T13:04:09.089025+00:00",
     "notes": ""
   },
   {
@@ -9422,6 +9422,31 @@
     "outcome": "PENDING",
     "outcome_pct": null,
     "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "51f1de84",
+    "logged_at": "2026-09-20T11:10:56.480460+00:00",
+    "market": "CRYPTO",
+    "symbol": "ENSO/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 1.046952,
+    "entry_high": 1.049048,
+    "stop": 1.000616,
+    "targets": [
+      1.10723,
+      1.166461
+    ],
+    "tp1": 1.10723,
+    "tp2": 1.166461,
+    "rr": 2.5,
+    "expected_pct": 11.3,
+    "confidence": 88,
+    "setup": "Momentum rally: +12.8% in 4 bars, RSI 74.3",
+    "outcome": "HIT_TP2",
+    "outcome_pct": 11.4,
+    "resolved_at": "2026-09-20T12:33:33.924991+00:00",
     "notes": ""
   }
 ]
