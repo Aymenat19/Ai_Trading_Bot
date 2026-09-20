@@ -9348,5 +9348,30 @@
     "outcome_pct": 4.3,
     "resolved_at": "2026-09-19T08:28:23.811653+00:00",
     "notes": ""
+  },
+  {
+    "id": "e49bc65c",
+    "logged_at": "2026-09-19T09:19:43.331517+00:00",
+    "market": "CRYPTO",
+    "symbol": "EPIC/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.41968,
+    "entry_high": 0.42052,
+    "stop": 0.404667,
+    "targets": [
+      0.446,
+      0.4818
+    ],
+    "tp1": 0.446,
+    "tp2": 0.4818,
+    "rr": 4.0,
+    "expected_pct": 14.7,
+    "confidence": 85,
+    "setup": "Hot momentum pullback: +16.1% 24h mover, pulled back 5.8% from high",
+    "outcome": "HIT_TP2",
+    "outcome_pct": 14.8,
+    "resolved_at": "2026-09-19T21:51:17.982788+00:00",
+    "notes": ""
   }
 ]
