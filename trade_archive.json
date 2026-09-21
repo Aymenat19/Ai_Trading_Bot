@@ -9673,5 +9673,30 @@
     "outcome_pct": 6.3,
     "resolved_at": "2026-09-21T07:05:52.528959+00:00",
     "notes": ""
+  },
+  {
+    "id": "6476c0c4",
+    "logged_at": "2026-09-21T08:31:23.788901+00:00",
+    "market": "CRYPTO",
+    "symbol": "FTT/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.285514,
+    "entry_high": 0.286086,
+    "stop": 0.26934,
+    "targets": [
+      0.3262,
+      0.3734
+    ],
+    "tp1": 0.3262,
+    "tp2": 0.3734,
+    "rr": 5.32,
+    "expected_pct": 30.7,
+    "confidence": 88,
+    "setup": "Hot momentum pullback: +35.5% 24h mover, pulled back 12.4% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
