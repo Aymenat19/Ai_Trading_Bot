@@ -9598,5 +9598,55 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "c28669c0",
+    "logged_at": "2026-09-21T06:19:12.181768+00:00",
+    "market": "CRYPTO",
+    "symbol": "EGLD/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 4.244751,
+    "entry_high": 4.253249,
+    "stop": 4.055562,
+    "targets": [
+      4.490797,
+      4.732594
+    ],
+    "tp1": 4.490797,
+    "tp2": 4.732594,
+    "rr": 2.5,
+    "expected_pct": 11.4,
+    "confidence": 80,
+    "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "e5d5adf5",
+    "logged_at": "2026-09-21T06:19:12.182053+00:00",
+    "market": "CRYPTO",
+    "symbol": "KMNO/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.033486,
+    "entry_high": 0.033554,
+    "stop": 0.031572,
+    "targets": [
+      0.03756,
+      0.04303
+    ],
+    "tp1": 0.03756,
+    "tp2": 0.04303,
+    "rr": 4.88,
+    "expected_pct": 28.4,
+    "confidence": 74,
+    "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
