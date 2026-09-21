@@ -9748,5 +9748,55 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "f36f32a5",
+    "logged_at": "2026-09-21T09:42:33.070089+00:00",
+    "market": "CRYPTO",
+    "symbol": "XLM/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.208491,
+    "entry_high": 0.208909,
+    "stop": 0.202276,
+    "targets": [
+      0.21673,
+      0.22476
+    ],
+    "tp1": 0.21673,
+    "tp2": 0.22476,
+    "rr": 2.5,
+    "expected_pct": 7.7,
+    "confidence": 84,
+    "setup": "Momentum rally: +5.4% in 4 bars, RSI 73.5",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "a4cb292c",
+    "logged_at": "2026-09-21T10:08:54.283751+00:00",
+    "market": "CRYPTO",
+    "symbol": "OPG/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.129171,
+    "entry_high": 0.129429,
+    "stop": 0.121253,
+    "targets": [
+      0.1519,
+      0.1802
+    ],
+    "tp1": 0.1519,
+    "tp2": 0.1802,
+    "rr": 6.33,
+    "expected_pct": 39.4,
+    "confidence": 84,
+    "setup": "Hot momentum pullback: +16.5% 24h mover, pulled back 14.9% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
