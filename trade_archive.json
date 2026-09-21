@@ -9823,5 +9823,30 @@
     "outcome_pct": -3.4,
     "resolved_at": "2026-09-21T11:57:51.239363+00:00",
     "notes": ""
+  },
+  {
+    "id": "a52a2afa",
+    "logged_at": "2026-09-21T12:44:27.772063+00:00",
+    "market": "CRYPTO",
+    "symbol": "LTC/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 62.45748,
+    "entry_high": 62.58252,
+    "stop": 60.675806,
+    "targets": [
+      64.825242,
+      67.130484
+    ],
+    "tp1": 64.825242,
+    "tp2": 67.130484,
+    "rr": 2.5,
+    "expected_pct": 7.4,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.7% in 4 bars, RSI 77.8",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
