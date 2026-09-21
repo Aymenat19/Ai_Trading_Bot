@@ -9873,5 +9873,80 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "1f6d1329",
+    "logged_at": "2026-09-21T15:28:14.336238+00:00",
+    "market": "CRYPTO",
+    "symbol": "SUPER/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.152048,
+    "entry_high": 0.152352,
+    "stop": 0.144641,
+    "targets": [
+      0.1591,
+      0.1721
+    ],
+    "tp1": 0.1591,
+    "tp2": 0.1721,
+    "rr": 2.63,
+    "expected_pct": 13.1,
+    "confidence": 80,
+    "setup": "Hot momentum pullback: +18.0% 24h mover, pulled back 4.3% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "9470f976",
+    "logged_at": "2026-09-21T15:28:14.336341+00:00",
+    "market": "CRYPTO",
+    "symbol": "ARB/USDT",
+    "action": "ADD",
+    "exchange": "Binance",
+    "entry_low": 0.232567,
+    "entry_high": 0.233033,
+    "stop": 0.222833,
+    "targets": [
+      0.2478,
+      0.2696
+    ],
+    "tp1": 0.2478,
+    "tp2": 0.2696,
+    "rr": 3.69,
+    "expected_pct": 15.8,
+    "confidence": 87,
+    "setup": "Hot momentum pullback: +16.5% 24h mover, pulled back 6.1% from high",
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.2,
+    "resolved_at": "2026-09-21T21:06:27.245424+00:00",
+    "notes": ""
+  },
+  {
+    "id": "5f189561",
+    "logged_at": "2026-09-21T15:31:04.875394+00:00",
+    "market": "CRYPTO",
+    "symbol": "SUI/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 1.012487,
+    "entry_high": 1.014513,
+    "stop": 0.987625,
+    "targets": [
+      1.0566,
+      1.1138
+    ],
+    "tp1": 1.0566,
+    "tp2": 1.1138,
+    "rr": 3.88,
+    "expected_pct": 9.9,
+    "confidence": 80,
+    "setup": "Hot momentum pullback: +21.7% 24h mover, pulled back 4.1% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
