@@ -9698,5 +9698,55 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "a9ce1934",
+    "logged_at": "2026-09-21T09:15:26.242295+00:00",
+    "market": "CRYPTO",
+    "symbol": "KERNEL/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.048252,
+    "entry_high": 0.048348,
+    "stop": 0.044625,
+    "targets": [
+      0.054,
+      0.0626
+    ],
+    "tp1": 0.054,
+    "tp2": 0.0626,
+    "rr": 3.89,
+    "expected_pct": 29.6,
+    "confidence": 82,
+    "setup": "Hot momentum pullback: +16.1% 24h mover, pulled back 10.6% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "d77ef7ef",
+    "logged_at": "2026-09-21T09:15:26.242440+00:00",
+    "market": "CRYPTO",
+    "symbol": "MINA/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.128272,
+    "entry_high": 0.128528,
+    "stop": 0.123649,
+    "targets": [
+      0.1363,
+      0.1472
+    ],
+    "tp1": 0.1363,
+    "tp2": 0.1472,
+    "rr": 3.96,
+    "expected_pct": 14.6,
+    "confidence": 80,
+    "setup": "Hot momentum pullback: +21.1% 24h mover, pulled back 5.8% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
