@@ -9948,5 +9948,30 @@
     "outcome_pct": 4.4,
     "resolved_at": "2026-09-22T09:11:50.602173+00:00",
     "notes": ""
+  },
+  {
+    "id": "bc544f76",
+    "logged_at": "2026-09-22T09:48:00.428062+00:00",
+    "market": "CRYPTO",
+    "symbol": "PEPE/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 5e-06,
+    "entry_high": 5e-06,
+    "stop": 5e-06,
+    "targets": [
+      5e-06,
+      6e-06
+    ],
+    "tp1": 5e-06,
+    "tp2": 6e-06,
+    "rr": 5.48,
+    "expected_pct": 17.3,
+    "confidence": 87,
+    "setup": "Hot momentum pullback: +17.5% 24h mover, pulled back 7.3% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
