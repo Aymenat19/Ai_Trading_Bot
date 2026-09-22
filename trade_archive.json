@@ -9569,9 +9569,9 @@
     "expected_pct": 19.7,
     "confidence": 79,
     "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.0,
+    "resolved_at": "2026-09-22T09:11:48.319911+00:00",
     "notes": ""
   },
   {
@@ -9719,9 +9719,9 @@
     "expected_pct": 29.6,
     "confidence": 82,
     "setup": "Hot momentum pullback: +16.1% 24h mover, pulled back 10.6% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "HIT_TP2",
+    "outcome_pct": 29.7,
+    "resolved_at": "2026-09-22T09:11:48.880671+00:00",
     "notes": ""
   },
   {
@@ -9769,9 +9769,9 @@
     "expected_pct": 7.7,
     "confidence": 84,
     "setup": "Momentum rally: +5.4% in 4 bars, RSI 73.5",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "HIT_TP1",
+    "outcome_pct": 4.0,
+    "resolved_at": "2026-09-22T09:11:49.171816+00:00",
     "notes": ""
   },
   {
@@ -9844,9 +9844,9 @@
     "expected_pct": 7.4,
     "confidence": 87,
     "setup": "Momentum rally: +5.7% in 4 bars, RSI 77.8",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -2.9,
+    "resolved_at": "2026-09-22T09:11:49.753486+00:00",
     "notes": ""
   },
   {
@@ -9944,9 +9944,9 @@
     "expected_pct": 9.9,
     "confidence": 80,
     "setup": "Hot momentum pullback: +21.7% 24h mover, pulled back 4.1% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "HIT_TP1",
+    "outcome_pct": 4.4,
+    "resolved_at": "2026-09-22T09:11:50.602173+00:00",
     "notes": ""
   }
 ]
