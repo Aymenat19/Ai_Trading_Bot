@@ -9973,5 +9973,55 @@
     "outcome_pct": 0.0,
     "resolved_at": "2026-09-22T10:03:35.564463+00:00",
     "notes": ""
+  },
+  {
+    "id": "3bc2ad5e",
+    "logged_at": "2026-09-22T10:24:16.946540+00:00",
+    "market": "CRYPTO",
+    "symbol": "XNO/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.427572,
+    "entry_high": 0.428428,
+    "stop": 0.39806,
+    "targets": [
+      0.474,
+      0.52
+    ],
+    "tp1": 0.474,
+    "tp2": 0.52,
+    "rr": 3.07,
+    "expected_pct": 21.5,
+    "confidence": 87,
+    "setup": "Hot momentum pullback: +20.3% 24h mover, pulled back 9.7% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "266fdfbb",
+    "logged_at": "2026-09-22T10:24:16.946684+00:00",
+    "market": "CRYPTO",
+    "symbol": "COOKIE/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.013287,
+    "entry_high": 0.013313,
+    "stop": 0.012451,
+    "targets": [
+      0.0143,
+      0.0159
+    ],
+    "tp1": 0.0143,
+    "tp2": 0.0159,
+    "rr": 3.06,
+    "expected_pct": 19.5,
+    "confidence": 82,
+    "setup": "Hot momentum pullback: +22.0% 24h mover, pulled back 7.0% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
