@@ -9969,9 +9969,9 @@
     "expected_pct": 17.3,
     "confidence": 87,
     "setup": "Hot momentum pullback: +17.5% 24h mover, pulled back 7.3% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": 0.0,
+    "resolved_at": "2026-09-22T10:03:35.564463+00:00",
     "notes": ""
   }
 ]
