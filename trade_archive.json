@@ -10173,5 +10173,55 @@
     "outcome_pct": -4.2,
     "resolved_at": "2026-09-23T06:10:56.124070+00:00",
     "notes": ""
+  },
+  {
+    "id": "8c878244",
+    "logged_at": "2026-09-23T08:54:18.836593+00:00",
+    "market": "CRYPTO",
+    "symbol": "CHR/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.021878,
+    "entry_high": 0.021922,
+    "stop": 0.020895,
+    "targets": [
+      0.02407,
+      0.02479
+    ],
+    "tp1": 0.02407,
+    "tp2": 0.02479,
+    "rr": 2.87,
+    "expected_pct": 13.2,
+    "confidence": 87,
+    "setup": "Hot momentum pullback: +23.2% 24h mover, pulled back 9.0% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "cc3be7ab",
+    "logged_at": "2026-09-23T08:54:18.836744+00:00",
+    "market": "CRYPTO",
+    "symbol": "SENT/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.022218,
+    "entry_high": 0.022262,
+    "stop": 0.021521,
+    "targets": [
+      0.02396,
+      0.02614
+    ],
+    "tp1": 0.02396,
+    "tp2": 0.02614,
+    "rr": 5.42,
+    "expected_pct": 17.5,
+    "confidence": 82,
+    "setup": "Hot momentum pullback: +15.1% 24h mover, pulled back 7.2% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
