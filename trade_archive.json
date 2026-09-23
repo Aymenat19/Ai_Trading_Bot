@@ -9794,9 +9794,9 @@
     "expected_pct": 39.4,
     "confidence": 84,
     "setup": "Hot momentum pullback: +16.5% 24h mover, pulled back 14.9% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -6.1,
+    "resolved_at": "2026-09-23T14:15:39.554293+00:00",
     "notes": ""
   },
   {
@@ -9869,9 +9869,9 @@
     "expected_pct": 19.1,
     "confidence": 84,
     "setup": "Hot momentum pullback: +18.3% 24h mover, pulled back 6.7% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -5.8,
+    "resolved_at": "2026-09-23T14:15:39.839250+00:00",
     "notes": ""
   },
   {
@@ -10269,9 +10269,9 @@
     "expected_pct": 15.7,
     "confidence": 82,
     "setup": "Hot momentum pullback: +15.3% 24h mover, pulled back 6.1% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -3.8,
+    "resolved_at": "2026-09-23T14:15:40.132513+00:00",
     "notes": ""
   },
   {
@@ -10294,9 +10294,9 @@
     "expected_pct": 10.6,
     "confidence": 80,
     "setup": "Hot momentum pullback: +15.9% 24h mover, pulled back 4.2% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -2.7,
+    "resolved_at": "2026-09-23T14:15:40.408723+00:00",
     "notes": ""
   }
 ]
