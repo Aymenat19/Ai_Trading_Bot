@@ -9644,9 +9644,9 @@
     "expected_pct": 28.4,
     "confidence": 74,
     "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "HIT_TP1",
+    "outcome_pct": 12.2,
+    "resolved_at": "2026-09-23T14:05:19.753430+00:00",
     "notes": ""
   },
   {
