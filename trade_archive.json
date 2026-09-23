@@ -10194,9 +10194,9 @@
     "expected_pct": 13.2,
     "confidence": 87,
     "setup": "Hot momentum pullback: +23.2% 24h mover, pulled back 9.0% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.5,
+    "resolved_at": "2026-09-23T13:39:25.473921+00:00",
     "notes": ""
   },
   {
@@ -10219,9 +10219,9 @@
     "expected_pct": 17.5,
     "confidence": 82,
     "setup": "Hot momentum pullback: +15.1% 24h mover, pulled back 7.2% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "HIT_TP1",
+    "outcome_pct": 7.8,
+    "resolved_at": "2026-09-23T13:39:25.759752+00:00",
     "notes": ""
   },
   {
@@ -10247,6 +10247,56 @@
     "outcome": "STOPPED_OUT",
     "outcome_pct": -5.3,
     "resolved_at": "2026-09-23T11:26:49.620676+00:00",
+    "notes": ""
+  },
+  {
+    "id": "43c5f128",
+    "logged_at": "2026-09-23T11:53:30.557718+00:00",
+    "market": "CRYPTO",
+    "symbol": "BB/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.01022,
+    "entry_high": 0.01024,
+    "stop": 0.009835,
+    "targets": [
+      0.0109,
+      0.01184
+    ],
+    "tp1": 0.0109,
+    "tp2": 0.01184,
+    "rr": 4.08,
+    "expected_pct": 15.7,
+    "confidence": 82,
+    "setup": "Hot momentum pullback: +15.3% 24h mover, pulled back 6.1% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "c8bae056",
+    "logged_at": "2026-09-23T12:15:58.814329+00:00",
+    "market": "CRYPTO",
+    "symbol": "0G/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.261139,
+    "entry_high": 0.261661,
+    "stop": 0.253983,
+    "targets": [
+      0.2728,
+      0.2892
+    ],
+    "tp1": 0.2728,
+    "tp2": 0.2892,
+    "rr": 3.75,
+    "expected_pct": 10.6,
+    "confidence": 80,
+    "setup": "Hot momentum pullback: +15.9% 24h mover, pulled back 4.2% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
     "notes": ""
   }
 ]
