@@ -1393,7 +1393,18 @@ def detect_hot_momentum(df: pd.DataFrame, market: str, gain_24h_pct: float = 0.0
     conf += 5 if pullback_pct >= 6 else (3 if pullback_pct >= 4 else 0)  # deeper pullback = better entry
     conf += 5 if rsi_val < 60 else (2 if rsi_val < 65 else 0)
     conf += 4 if healthy_fade else 0
-    conf = min(88, conf)
+    # Cap lowered 88→85 (2026-09-24): live data (Aug24-Sep24, N=53) showed the
+    # 87-88 tier was this setup's worst performer — 12.5%→0% WR on 18 trades,
+    # dragging the whole setup's blended WR from a historical 69% down to
+    # ~33%. This wasn't a fluke either — the original pre-2026-04-27 comment
+    # block already documented the same inversion (79-83% conf → 88% WR vs
+    # 92-95% conf → 54% WR): higher confidence here has always correlated
+    # with a bigger, more "obviously overheated" pump, which is more likely
+    # to be an exhausted move than a healthy continuation. The formula still
+    # rewards those traits (large gain, deep pullback, low RSI, volume fade)
+    # for ranking between setups, just no longer lets that push a signal
+    # into the specific range that's empirically failed worst.
+    conf = min(85, conf)
 
     reasons = [
         f"Hot momentum pullback: +{gain_24h_pct:.1f}% 24h mover, pulled back {pullback_pct:.1f}% from high",
@@ -1650,26 +1661,35 @@ def compute_break_model(df: pd.DataFrame, market: str, lookback_break: int = 20,
     #   VOLATILITY_EXPANSION  no live data
     #
     # ENABLED (positive expected value confirmed in live data):
-    #   HOT_MOMENTUM_PULLBACK  106W/46L  WR:69%  avg_win:+14.9%  avg_loss:-5.2%  ← primary
+    #   MOMENTUM_RALLY          17W/15L  WR:53%  (N=32, Sep8-24 window)          ← promoted 2026-09-24
+    #   HOT_MOMENTUM_PULLBACK  106W/46L  WR:69%  avg_win:+14.9%  avg_loss:-5.2%  ← original track record,
+    #                           but only 33% WR (11W/22L, N=33) since 2026-08-24 — see conf-cap note below
     #   RANGE_BOUNCE             8W/6L   WR:57%  avg_win:+4.5%   avg_loss:-1.7%  ← secondary
     #
-    # RE-ENABLED 2026-08-24 (were the only setups covering a trending/breakout
-    # market with no pullback — HOT_MOMENTUM/RANGE_BOUNCE both need a pullback or
-    # a non-trending regime, so the bot produced zero signals for two weeks during
-    # a broad rally in Aug 2026 despite big moves in ZRO/NOT/HEMI/PEOPLE/HOLO/BTC).
-    # Original prune (2026-04-27) cited 0/5 WR for MOMENTUM_RALLY and "no live data"
-    # for TREND_CONTINUATION — i.e. neither was ever actually live-tested. Both are
-    # wired back in with tightened internal thresholds (see detect_trend_continuation
-    # ADX fallback and detect_momentum_rally momentum/volume gates) and a higher
-    # confluence bar (70 vs 65) as a new, unvalidated live track record starts.
-    # Review after each one's first 15-20 resolved signals; disable again (and
-    # record observed WR here) if WR < ~40%.
-    #   TREND_CONTINUATION    re-enabled, no live data yet — watch closely
-    #   MOMENTUM_RALLY         re-enabled, was 0/5 WR:0% avg:-6.6% (too small a sample
-    #                           to trust; thresholds tightened since — watch closely)
+    # RE-ENABLED 2026-08-24, PROMOTED 2026-09-24 (were the only setups covering a
+    # trending/breakout market with no pullback — HOT_MOMENTUM/RANGE_BOUNCE both
+    # need a pullback or a non-trending regime, so the bot produced zero signals
+    # for two weeks during a broad rally in Aug 2026 despite big moves in
+    # ZRO/NOT/HEMI/PEOPLE/HOLO). Original prune (2026-04-27) cited 0/5 WR for
+    # MOMENTUM_RALLY and "no live data" for TREND_CONTINUATION — i.e. neither was
+    # ever actually live-tested.
+    #   MOMENTUM_RALLY: cleared the N≥20/WR≥50% graduation bar on 2026-09-24
+    #     (32 resolved, 53% WR) — now trusted on the same footing as the original
+    #     two setups, and exempted from the BTC-downtrend veto (see _analyse_crypto:
+    #     its own gates already require independent alt momentum, and the funnel
+    #     log showed the veto blocking 70+ real candidates in under 3 weeks during
+    #     BTC-weak/alt-strong rotations).
+    #   TREND_CONTINUATION: still no live fires — its structural requirements
+    #     (confirmed swing structure + tight consolidation + breakout + the shared
+    #     8%-max-stop/R:R gate) are just rare. Not broken, just unproven — leave as-is.
     #
-    # Confidence note: confluence bonus DISABLED for HOT_MOMENTUM (inverts win rate).
-    #   79-83% conf → 88% WR;  84-87% → 79% WR;  88-91% → 61% WR;  92-95% → 54% WR
+    # Confidence note: confluence bonus DISABLED for HOT_MOMENTUM (inverts win rate) —
+    # this has been a persistent property of the setup, not new: 79-83% conf → 88% WR;
+    # 84-87% → 79% WR; 88-91% → 61% WR; 92-95% → 54% WR (original data). Live data
+    # since 2026-08-24 shows the same inversion much more severely (conf 87-88 →
+    # 12.5%→0% WR, N=18) — detect_hot_momentum's confidence ceiling was lowered
+    # 88→85 on 2026-09-24 to cut that tier off; the setup is being watched, not yet
+    # disabled, since the 80-85 tier still clears ~40% WR post-cap.
 
     # Range bounce — run in all non-trending regimes
     if regime in ("RANGE", "COMPRESSION", "CHOPPY"):
@@ -1813,9 +1833,18 @@ def _analyse_crypto(sym: str, timeframe: str, limit: int, holdings: dict, gain_2
     pre_veto_action = action
     vetoes_applied: List[str] = []
     original_setup = why[0] if why else ""
+    is_momentum_rally = any("Setup: MOMENTUM_RALLY" in w for w in why)
 
-    # BTC downtrend: suppress altcoin longs
-    if action == "BUY" and btc_trend == "DOWN" and sym != "BTC/USDT":
+    # BTC downtrend: suppress altcoin longs — except MOMENTUM_RALLY, which
+    # already requires strong independent 4-bar momentum + volume + RSI
+    # 55-78 on the alt itself (evidence the move isn't riding on BTC).
+    # Funnel-log data (2026-09-24) showed this veto blocking 70+ real
+    # candidates in under 3 weeks, heavily clustered during a period where
+    # alts were rallying independently while BTC chopped/dipped — a
+    # BTC-weak/alt-strong rotation, not a broad downturn the veto is meant
+    # to protect against. Kept for HOT_MOMENTUM/other setups, where it's
+    # less clear the move is independent of BTC.
+    if action == "BUY" and btc_trend == "DOWN" and sym != "BTC/USDT" and not is_momentum_rally:
         action = "WATCH"
         why = ["BTC in downtrend — BUY downgraded to WATCH"] + why
         vetoes_applied.append("btc_downtrend")
