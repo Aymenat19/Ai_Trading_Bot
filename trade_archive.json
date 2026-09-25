@@ -10298,5 +10298,55 @@
     "outcome_pct": -2.7,
     "resolved_at": "2026-09-23T14:15:40.408723+00:00",
     "notes": ""
+  },
+  {
+    "id": "4f10306e",
+    "logged_at": "2026-09-25T09:16:03.816773+00:00",
+    "market": "CRYPTO",
+    "symbol": "XPL/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.116963,
+    "entry_high": 0.117197,
+    "stop": 0.111352,
+    "targets": [
+      0.12555,
+      0.13775
+    ],
+    "tp1": 0.12555,
+    "tp2": 0.13775,
+    "rr": 3.61,
+    "expected_pct": 17.7,
+    "confidence": 85,
+    "setup": "Hot momentum pullback: +33.1% 24h mover, pulled back 6.7% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "1b1656fa",
+    "logged_at": "2026-09-25T09:16:03.816948+00:00",
+    "market": "CRYPTO",
+    "symbol": "LDO/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.44925,
+    "entry_high": 0.45015,
+    "stop": 0.427913,
+    "targets": [
+      0.4766,
+      0.521
+    ],
+    "tp1": 0.4766,
+    "tp2": 0.521,
+    "rr": 3.27,
+    "expected_pct": 15.9,
+    "confidence": 80,
+    "setup": "Hot momentum pullback: +15.4% 24h mover, pulled back 5.6% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
