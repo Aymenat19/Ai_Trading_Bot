@@ -10373,5 +10373,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "1a090bf2",
+    "logged_at": "2026-09-25T09:57:29.569955+00:00",
+    "market": "CRYPTO",
+    "symbol": "LINK/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 14.132853,
+    "entry_high": 14.161147,
+    "stop": 13.689663,
+    "targets": [
+      14.718671,
+      15.290342
+    ],
+    "tp1": 14.718671,
+    "tp2": 15.290342,
+    "rr": 2.5,
+    "expected_pct": 8.1,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.2% in 4 bars, RSI 77.3",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
