@@ -10398,5 +10398,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "7701a18c",
+    "logged_at": "2026-09-25T11:20:39.029505+00:00",
+    "market": "CRYPTO",
+    "symbol": "SUI/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 1.115583,
+    "entry_high": 1.117817,
+    "stop": 1.071149,
+    "targets": [
+      1.173638,
+      1.230576
+    ],
+    "tp1": 1.173638,
+    "tp2": 1.230576,
+    "rr": 2.5,
+    "expected_pct": 10.2,
+    "confidence": 88,
+    "setup": "Momentum rally: +10.2% in 4 bars, RSI 75.7",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
