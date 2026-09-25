@@ -10348,5 +10348,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "1cae435e",
+    "logged_at": "2026-09-25T09:36:46.364995+00:00",
+    "market": "CRYPTO",
+    "symbol": "QNT/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 96.59331,
+    "entry_high": 96.78669,
+    "stop": 92.081254,
+    "targets": [
+      104.68,
+      115.87
+    ],
+    "tp1": 104.68,
+    "tp2": 115.87,
+    "rr": 4.16,
+    "expected_pct": 19.8,
+    "confidence": 85,
+    "setup": "Hot momentum pullback: +36.4% 24h mover, pulled back 7.6% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
