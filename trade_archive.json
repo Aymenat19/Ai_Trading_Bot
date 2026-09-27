@@ -10498,5 +10498,55 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "e03941ab",
+    "logged_at": "2026-09-27T09:52:40.693631+00:00",
+    "market": "CRYPTO",
+    "symbol": "RAY/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 2.26773,
+    "entry_high": 2.27227,
+    "stop": 2.17468,
+    "targets": [
+      2.38915,
+      2.508301
+    ],
+    "tp1": 2.38915,
+    "tp2": 2.508301,
+    "rr": 2.5,
+    "expected_pct": 10.5,
+    "confidence": 88,
+    "setup": "Momentum rally: +6.1% in 4 bars, RSI 74.4",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "8fc86edf",
+    "logged_at": "2026-09-27T10:03:04.043898+00:00",
+    "market": "CRYPTO",
+    "symbol": "MOVR/USDT",
+    "action": "ADD",
+    "exchange": "Binance, Kraken",
+    "entry_low": 1.072926,
+    "entry_high": 1.075074,
+    "stop": 1.022444,
+    "targets": [
+      1.138445,
+      1.20289
+    ],
+    "tp1": 1.138445,
+    "tp2": 1.20289,
+    "rr": 2.5,
+    "expected_pct": 12.0,
+    "confidence": 90,
+    "setup": "Momentum rally: +6.8% in 4 bars, RSI 68.4",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
