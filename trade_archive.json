@@ -10598,5 +10598,30 @@
     "outcome_pct": 6.0,
     "resolved_at": "2026-09-28T14:17:08.784730+00:00",
     "notes": ""
+  },
+  {
+    "id": "9b35cbe7",
+    "logged_at": "2026-09-28T18:43:16.083292+00:00",
+    "market": "CRYPTO",
+    "symbol": "XLM/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.22977,
+    "entry_high": 0.23023,
+    "stop": 0.219429,
+    "targets": [
+      0.243213,
+      0.256427
+    ],
+    "tp1": 0.243213,
+    "tp2": 0.256427,
+    "rr": 2.5,
+    "expected_pct": 11.5,
+    "confidence": 87,
+    "setup": "Momentum rally: +6.0% in 4 bars, RSI 66.8",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
