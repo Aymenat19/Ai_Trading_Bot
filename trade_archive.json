@@ -10573,5 +10573,30 @@
     "outcome_pct": -4.8,
     "resolved_at": "2026-09-28T04:38:16.976358+00:00",
     "notes": ""
+  },
+  {
+    "id": "2835a166",
+    "logged_at": "2026-09-28T10:10:01.495267+00:00",
+    "market": "CRYPTO",
+    "symbol": "ALGO/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.127073,
+    "entry_high": 0.127327,
+    "stop": 0.121229,
+    "targets": [
+      0.134664,
+      0.142128
+    ],
+    "tp1": 0.134664,
+    "tp2": 0.142128,
+    "rr": 2.5,
+    "expected_pct": 11.7,
+    "confidence": 88,
+    "setup": "Momentum rally: +8.3% in 4 bars, RSI 69.2",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
