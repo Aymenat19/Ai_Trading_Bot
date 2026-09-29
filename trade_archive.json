@@ -10698,5 +10698,55 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "2bbad19b",
+    "logged_at": "2026-09-29T09:43:33.470307+00:00",
+    "market": "CRYPTO",
+    "symbol": "SYRUP/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.247652,
+    "entry_high": 0.248148,
+    "stop": 0.235624,
+    "targets": [
+      0.263245,
+      0.278589
+    ],
+    "tp1": 0.263245,
+    "tp2": 0.278589,
+    "rr": 2.5,
+    "expected_pct": 12.4,
+    "confidence": 88,
+    "setup": "Momentum rally: +9.8% in 4 bars, RSI 71.4",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "69258656",
+    "logged_at": "2026-09-29T09:43:33.470470+00:00",
+    "market": "CRYPTO",
+    "symbol": "ETHFI/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.747352,
+    "entry_high": 0.748848,
+    "stop": 0.714976,
+    "targets": [
+      0.789505,
+      0.83091
+    ],
+    "tp1": 0.789505,
+    "tp2": 0.83091,
+    "rr": 2.5,
+    "expected_pct": 11.1,
+    "confidence": 88,
+    "setup": "Momentum rally: +7.4% in 4 bars, RSI 66.1",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
