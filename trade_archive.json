@@ -10648,5 +10648,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "6a490d93",
+    "logged_at": "2026-09-29T07:48:43.381193+00:00",
+    "market": "CRYPTO",
+    "symbol": "AAVE/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 165.77406,
+    "entry_high": 166.10594,
+    "stop": 159.226286,
+    "targets": [
+      174.332142,
+      182.724284
+    ],
+    "tp1": 174.332142,
+    "tp2": 182.724284,
+    "rr": 2.5,
+    "expected_pct": 10.1,
+    "confidence": 82,
+    "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
