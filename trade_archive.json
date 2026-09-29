@@ -10623,5 +10623,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "a9f05bf6",
+    "logged_at": "2026-09-29T07:17:46.965088+00:00",
+    "market": "CRYPTO",
+    "symbol": "ALICE/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.168831,
+    "entry_high": 0.169169,
+    "stop": 0.160766,
+    "targets": [
+      0.179292,
+      0.189584
+    ],
+    "tp1": 0.179292,
+    "tp2": 0.189584,
+    "rr": 2.5,
+    "expected_pct": 12.2,
+    "confidence": 82,
+    "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
