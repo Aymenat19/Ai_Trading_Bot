@@ -10673,5 +10673,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "65e081c0",
+    "logged_at": "2026-09-29T09:33:14.330397+00:00",
+    "market": "CRYPTO",
+    "symbol": "CVX/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 2.362635,
+    "entry_high": 2.367365,
+    "stop": 2.255599,
+    "targets": [
+      2.501752,
+      2.638503
+    ],
+    "tp1": 2.501752,
+    "tp2": 2.638503,
+    "rr": 2.5,
+    "expected_pct": 11.6,
+    "confidence": 84,
+    "setup": "Momentum rally: +5.2% in 4 bars, RSI 76.1",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
