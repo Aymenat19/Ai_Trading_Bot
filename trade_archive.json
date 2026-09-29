@@ -10773,5 +10773,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "c93bb6ee",
+    "logged_at": "2026-09-29T20:23:27.501143+00:00",
+    "market": "CRYPTO",
+    "symbol": "BERA/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.238361,
+    "entry_high": 0.238839,
+    "stop": 0.229472,
+    "targets": [
+      0.25001,
+      0.26142
+    ],
+    "tp1": 0.25001,
+    "tp2": 0.26142,
+    "rr": 2.5,
+    "expected_pct": 9.6,
+    "confidence": 88,
+    "setup": "Momentum rally: +6.8% in 4 bars, RSI 72.5",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
