@@ -10923,5 +10923,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "02030931",
+    "logged_at": "2026-09-30T12:12:56.271236+00:00",
+    "market": "CRYPTO",
+    "symbol": "GLMR/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.009315,
+    "entry_high": 0.009333,
+    "stop": 0.008734,
+    "targets": [
+      0.01033,
+      0.011759
+    ],
+    "tp1": 0.01033,
+    "tp2": 0.011759,
+    "rr": 4.13,
+    "expected_pct": 26.1,
+    "confidence": 82,
+    "setup": "Hot momentum pullback: +22.9% 24h mover, pulled back 9.7% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
