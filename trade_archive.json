@@ -10619,9 +10619,9 @@
     "expected_pct": 11.5,
     "confidence": 87,
     "setup": "Momentum rally: +6.0% in 4 bars, RSI 66.8",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.5,
+    "resolved_at": "2026-09-30T07:08:47.995754+00:00",
     "notes": ""
   },
   {
@@ -10719,9 +10719,9 @@
     "expected_pct": 12.4,
     "confidence": 88,
     "setup": "Momentum rally: +9.8% in 4 bars, RSI 71.4",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.9,
+    "resolved_at": "2026-09-29T21:54:29.458258+00:00",
     "notes": ""
   },
   {
@@ -10769,9 +10769,9 @@
     "expected_pct": 12.2,
     "confidence": 90,
     "setup": "Momentum rally: +8.1% in 4 bars, RSI 77.8",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "HIT_TP1",
+    "outcome_pct": 6.2,
+    "resolved_at": "2026-09-30T07:08:48.267766+00:00",
     "notes": ""
   },
   {
@@ -10794,9 +10794,9 @@
     "expected_pct": 9.6,
     "confidence": 88,
     "setup": "Momentum rally: +6.8% in 4 bars, RSI 72.5",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "HIT_TP1",
+    "outcome_pct": 4.9,
+    "resolved_at": "2026-09-29T21:54:30.012168+00:00",
     "notes": ""
   }
 ]
