@@ -10819,9 +10819,9 @@
     "expected_pct": 11.6,
     "confidence": 79,
     "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.6,
+    "resolved_at": "2026-09-30T10:19:31.092943+00:00",
     "notes": ""
   },
   {
@@ -10847,6 +10847,31 @@
     "outcome": "STOPPED_OUT",
     "outcome_pct": -3.1,
     "resolved_at": "2026-09-30T08:31:21.057118+00:00",
+    "notes": ""
+  },
+  {
+    "id": "88186341",
+    "logged_at": "2026-09-30T10:14:21.140833+00:00",
+    "market": "CRYPTO",
+    "symbol": "PHA/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.076623,
+    "entry_high": 0.076777,
+    "stop": 0.072856,
+    "targets": [
+      0.0838,
+      0.0933
+    ],
+    "tp1": 0.0838,
+    "tp2": 0.0933,
+    "rr": 4.32,
+    "expected_pct": 21.6,
+    "confidence": 84,
+    "setup": "Hot momentum pullback: +17.1% 24h mover, pulled back 8.5% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
     "notes": ""
   }
 ]
