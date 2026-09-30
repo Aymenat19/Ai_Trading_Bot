@@ -10873,5 +10873,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "49ce9c2a",
+    "logged_at": "2026-09-30T10:34:58.133377+00:00",
+    "market": "CRYPTO",
+    "symbol": "BONK/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 4e-06,
+    "entry_high": 4e-06,
+    "stop": 4e-06,
+    "targets": [
+      4e-06,
+      4e-06
+    ],
+    "tp1": 4e-06,
+    "tp2": 4e-06,
+    "rr": 2.5,
+    "expected_pct": 11.9,
+    "confidence": 88,
+    "setup": "Momentum rally: +7.0% in 4 bars, RSI 71.1",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
