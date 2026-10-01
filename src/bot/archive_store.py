@@ -90,6 +90,19 @@ def archive_signal(idea, archive: list) -> bool:
     entry_high = round(idea.entry[1], 6) if idea.entry else None
     targets    = [round(t, 6) for t in idea.targets] if idea.targets else []
 
+    # idea.why[0] is NOT reliably the setup description — session/funding
+    # annotations in _analyse_crypto unconditionally prepend to `why`
+    # regardless of action (e.g. any BUY with funding 0.05-0.1%, or any
+    # off-peak BUY now that the hard block is gone), which overwrites why[0]
+    # with "Off-peak session..."/"Funding ... caution" instead of the real
+    # setup name. diagnostics["setup"] is captured in _analyse_crypto before
+    # any of that prepending happens, so prefer it. Stock ideas have no
+    # diagnostics (only crypto sets it), hence the fallback.
+    setup_desc = (
+        (idea.diagnostics or {}).get("setup")
+        or (idea.why[0] if idea.why else "")
+    )
+
     archive.append({
         "id":           str(uuid.uuid4())[:8],
         "logged_at":    datetime.now(timezone.utc).isoformat(),
@@ -106,7 +119,7 @@ def archive_signal(idea, archive: list) -> bool:
         "rr":           round(idea.rr, 2) if idea.rr else None,
         "expected_pct": round(idea.expected_pct, 1) if idea.expected_pct else None,
         "confidence":   idea.confidence,
-        "setup":        idea.why[0] if idea.why else "",
+        "setup":        setup_desc,
         "outcome":      "PENDING",
         "outcome_pct":  None,
         "resolved_at":  None,

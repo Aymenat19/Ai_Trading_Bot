@@ -197,7 +197,7 @@ while True:
                 "conf": i.confidence,
                 "rr": i.rr,
                 "exp_pct": i.expected_pct,
-                "setup": i.why[0] if i.why else "",
+                "setup": (i.diagnostics or {}).get("setup") or (i.why[0] if i.why else ""),
             })
     _other_signals = [i for i in opp_ideas if i.action != "BUY"]
     new_count = sum(1 for i in _buy_candidates + _other_signals if i.action in ("BUY","ADD") and archive_signal(i, archive))
