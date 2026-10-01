@@ -1393,18 +1393,24 @@ def detect_hot_momentum(df: pd.DataFrame, market: str, gain_24h_pct: float = 0.0
     conf += 5 if pullback_pct >= 6 else (3 if pullback_pct >= 4 else 0)  # deeper pullback = better entry
     conf += 5 if rsi_val < 60 else (2 if rsi_val < 65 else 0)
     conf += 4 if healthy_fade else 0
-    # Cap lowered 88→85 (2026-09-24): live data (Aug24-Sep24, N=53) showed the
-    # 87-88 tier was this setup's worst performer — 12.5%→0% WR on 18 trades,
-    # dragging the whole setup's blended WR from a historical 69% down to
-    # ~33%. This wasn't a fluke either — the original pre-2026-04-27 comment
-    # block already documented the same inversion (79-83% conf → 88% WR vs
-    # 92-95% conf → 54% WR): higher confidence here has always correlated
-    # with a bigger, more "obviously overheated" pump, which is more likely
-    # to be an exhausted move than a healthy continuation. The formula still
-    # rewards those traits (large gain, deep pullback, low RSI, volume fade)
-    # for ranking between setups, just no longer lets that push a signal
-    # into the specific range that's empirically failed worst.
-    conf = min(85, conf)
+
+    # REJECT outright (not just cap the label) when raw conf >= 86. The
+    # 2026-09-24 fix capped the reported score to 85, but the action gate in
+    # _analyse_crypto is `conf >= 72` — a MINIMUM, not a ceiling — so a
+    # trade that scored 88 pre-cap still cleared the gate and still fired,
+    # just relabeled "85". Checked post-fix data (Sep25-Oct1): the "conf=85"
+    # bucket got WORSE (16.7% WR, was 50% pre-fix on genuine raw-85 trades)
+    # because it was now absorbing every former 86-88 trade too — the cap
+    # changed nothing about which trades get taken. Live data consistently
+    # shows this tier converting at 0-12.5% WR (Aug24-Sep24: 87-88 tier,
+    # N=18, 12.5%→0%) — this isn't a fluke, the original pre-2026-04-27
+    # comment already documented the same high-conf/low-WR inversion for
+    # this setup, just less severely. The formula still rewards these
+    # traits (large gain, deep pullback, low RSI, volume fade) for ranking
+    # against other setups when below this bar — they just can't push a
+    # trade into the range that's empirically failed worst anymore.
+    if conf >= 86:
+        return None
 
     reasons = [
         f"Hot momentum pullback: +{gain_24h_pct:.1f}% 24h mover, pulled back {pullback_pct:.1f}% from high",
@@ -1661,9 +1667,12 @@ def compute_break_model(df: pd.DataFrame, market: str, lookback_break: int = 20,
     #   VOLATILITY_EXPANSION  no live data
     #
     # ENABLED (positive expected value confirmed in live data):
-    #   MOMENTUM_RALLY          17W/15L  WR:53%  (N=32, Sep8-24 window)          ← promoted 2026-09-24
+    #   MOMENTUM_RALLY          28W/25L  WR:53%  (N=53 combined, Sep8-Oct1)       ← promoted 2026-09-24,
+    #                           stable post-promotion (52% WR, N=21, Sep25-Oct1) — holding up
     #   HOT_MOMENTUM_PULLBACK  106W/46L  WR:69%  avg_win:+14.9%  avg_loss:-5.2%  ← original track record,
-    #                           but only 33% WR (11W/22L, N=33) since 2026-08-24 — see conf-cap note below
+    #                           but 33% WR (N=33) Aug24-Sep24, then 20% WR (N=10) Sep25-Oct1 even
+    #                           AFTER the 2026-09-24 conf-cap fix — see conf-reject note below, that
+    #                           fix was ineffective and has been replaced
     #   RANGE_BOUNCE             8W/6L   WR:57%  avg_win:+4.5%   avg_loss:-1.7%  ← secondary
     #
     # RE-ENABLED 2026-08-24, PROMOTED 2026-09-24 (were the only setups covering a
@@ -1678,18 +1687,24 @@ def compute_break_model(df: pd.DataFrame, market: str, lookback_break: int = 20,
     #     two setups, and exempted from the BTC-downtrend veto (see _analyse_crypto:
     #     its own gates already require independent alt momentum, and the funnel
     #     log showed the veto blocking 70+ real candidates in under 3 weeks during
-    #     BTC-weak/alt-strong rotations).
+    #     BTC-weak/alt-strong rotations). Verified 2026-10-02: zero Momentum Rally
+    #     candidates dropped by btc_downtrend since the exemption shipped — working
+    #     as intended. Still WR~52% a week later — holding, not a fluke.
     #   TREND_CONTINUATION: still no live fires — its structural requirements
     #     (confirmed swing structure + tight consolidation + breakout + the shared
     #     8%-max-stop/R:R gate) are just rare. Not broken, just unproven — leave as-is.
     #
     # Confidence note: confluence bonus DISABLED for HOT_MOMENTUM (inverts win rate) —
     # this has been a persistent property of the setup, not new: 79-83% conf → 88% WR;
-    # 84-87% → 79% WR; 88-91% → 61% WR; 92-95% → 54% WR (original data). Live data
-    # since 2026-08-24 shows the same inversion much more severely (conf 87-88 →
-    # 12.5%→0% WR, N=18) — detect_hot_momentum's confidence ceiling was lowered
-    # 88→85 on 2026-09-24 to cut that tier off; the setup is being watched, not yet
-    # disabled, since the 80-85 tier still clears ~40% WR post-cap.
+    # 84-87% → 79% WR; 88-91% → 61% WR; 92-95% → 54% WR (original data). The
+    # 2026-09-24 fix capped the REPORTED score to 85 but didn't fix anything —
+    # _analyse_crypto's action gate is `conf >= 72`, a minimum, so a trade that
+    # scored 88 pre-cap still fired, just relabeled "85". Confirmed by Sep25-Oct1
+    # data: the "conf=85" bucket got WORSE (16.7% WR) than pre-fix genuine-85
+    # trades (50% WR) because it now silently absorbed every former 86-88 trade.
+    # Replaced 2026-10-02: detect_hot_momentum now returns None outright when raw
+    # conf >= 86, instead of capping the label. Setup is being watched, not yet
+    # disabled — the sub-86 tier historically clears ~40% WR.
 
     # Range bounce — run in all non-trending regimes
     if regime in ("RANGE", "COMPRESSION", "CHOPPY"):
