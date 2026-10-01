@@ -11044,9 +11044,9 @@
     "expected_pct": 10.2,
     "confidence": 82,
     "setup": "Off-peak session (Asian/off-peak) \u2014 confidence penalised, not blocked",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.0,
+    "resolved_at": "2026-10-01T10:06:16.725865+00:00",
     "notes": ""
   },
   {
@@ -11194,9 +11194,9 @@
     "expected_pct": 12.3,
     "confidence": 87,
     "setup": "Momentum rally: +5.6% in 4 bars, RSI 72.3",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.8,
+    "resolved_at": "2026-10-01T10:01:07.060712+00:00",
     "notes": ""
   },
   {
@@ -11219,6 +11219,31 @@
     "expected_pct": 7.4,
     "confidence": 90,
     "setup": "Momentum rally: +8.5% in 4 bars, RSI 77.6",
+    "outcome": "HIT_TP1",
+    "outcome_pct": 3.8,
+    "resolved_at": "2026-10-01T10:01:07.337769+00:00",
+    "notes": ""
+  },
+  {
+    "id": "6804f01c",
+    "logged_at": "2026-10-01T10:11:26.101243+00:00",
+    "market": "CRYPTO",
+    "symbol": "ZRO/USDT",
+    "action": "ADD",
+    "exchange": "Binance, Kraken",
+    "entry_low": 1.647351,
+    "entry_high": 1.650649,
+    "stop": 1.599654,
+    "targets": [
+      1.70085,
+      1.781992
+    ],
+    "tp1": 1.70085,
+    "tp2": 1.781992,
+    "rr": 2.7,
+    "expected_pct": 8.1,
+    "confidence": 73,
+    "setup": "Range bounce: 10.7% channel, price at support 1.6230",
     "outcome": "PENDING",
     "outcome_pct": null,
     "resolved_at": null,
