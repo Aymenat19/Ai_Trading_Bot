@@ -11348,5 +11348,55 @@
     "outcome_pct": -4.2,
     "resolved_at": "2026-10-02T07:13:47.416165+00:00",
     "notes": ""
+  },
+  {
+    "id": "9a89b90d",
+    "logged_at": "2026-10-02T07:18:56.623441+00:00",
+    "market": "CRYPTO",
+    "symbol": "MINA/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.165434,
+    "entry_high": 0.165766,
+    "stop": 0.158348,
+    "targets": [
+      0.174666,
+      0.183731
+    ],
+    "tp1": 0.174666,
+    "tp2": 0.183731,
+    "rr": 2.5,
+    "expected_pct": 10.9,
+    "confidence": 82,
+    "setup": "Momentum rally: +7.7% in 4 bars, RSI 75.0",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "50007ca1",
+    "logged_at": "2026-10-02T07:24:06.397307+00:00",
+    "market": "CRYPTO",
+    "symbol": "GALA/USDT",
+    "action": "ADD",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.002441,
+    "entry_high": 0.002445,
+    "stop": 0.00236,
+    "targets": [
+      0.002547,
+      0.00265
+    ],
+    "tp1": 0.002547,
+    "tp2": 0.00265,
+    "rr": 2.5,
+    "expected_pct": 8.5,
+    "confidence": 82,
+    "setup": "Momentum rally: +6.5% in 4 bars, RSI 70.9",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
