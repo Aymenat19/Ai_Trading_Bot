@@ -11473,5 +11473,30 @@
     "outcome_pct": -3.4,
     "resolved_at": "2026-10-02T11:38:20.156951+00:00",
     "notes": ""
+  },
+  {
+    "id": "ea7406d1",
+    "logged_at": "2026-10-02T20:18:39.416194+00:00",
+    "market": "CRYPTO",
+    "symbol": "NMR/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 12.1878,
+    "entry_high": 12.2122,
+    "stop": 11.675355,
+    "targets": [
+      12.855806,
+      13.511613
+    ],
+    "tp1": 12.855806,
+    "tp2": 13.511613,
+    "rr": 2.5,
+    "expected_pct": 10.8,
+    "confidence": 90,
+    "setup": "Momentum rally: +6.9% in 4 bars, RSI 69.1",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
