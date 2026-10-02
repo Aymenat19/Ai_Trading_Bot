@@ -11323,5 +11323,30 @@
     "outcome_pct": -4.2,
     "resolved_at": "2026-10-02T04:49:01.209215+00:00",
     "notes": ""
+  },
+  {
+    "id": "d04cf665",
+    "logged_at": "2026-10-02T05:37:24.803833+00:00",
+    "market": "CRYPTO",
+    "symbol": "MUBARAK/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.066294,
+    "entry_high": 0.066426,
+    "stop": 0.063513,
+    "targets": [
+      0.069919,
+      0.073479
+    ],
+    "tp1": 0.069919,
+    "tp2": 0.073479,
+    "rr": 2.5,
+    "expected_pct": 10.7,
+    "confidence": 82,
+    "setup": "Momentum rally: +6.4% in 4 bars, RSI 72.6",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
