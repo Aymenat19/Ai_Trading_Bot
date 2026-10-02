@@ -11448,5 +11448,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "1887125b",
+    "logged_at": "2026-10-02T10:44:34.338241+00:00",
+    "market": "CRYPTO",
+    "symbol": "ILV/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 4.1958,
+    "entry_high": 4.2042,
+    "stop": 4.054247,
+    "targets": [
+      4.382191,
+      4.564382
+    ],
+    "tp1": 4.382191,
+    "tp2": 4.564382,
+    "rr": 2.5,
+    "expected_pct": 8.7,
+    "confidence": 88,
+    "setup": "Momentum rally: +6.3% in 4 bars, RSI 73.5",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
