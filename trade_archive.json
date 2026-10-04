@@ -11648,5 +11648,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "af1d9c76",
+    "logged_at": "2026-10-04T18:22:47.494353+00:00",
+    "market": "CRYPTO",
+    "symbol": "CHIP/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.048561,
+    "entry_high": 0.048659,
+    "stop": 0.046948,
+    "targets": [
+      0.050688,
+      0.052766
+    ],
+    "tp1": 0.050688,
+    "tp2": 0.052766,
+    "rr": 2.5,
+    "expected_pct": 8.5,
+    "confidence": 84,
+    "setup": "Momentum rally: +5.5% in 4 bars, RSI 73.2",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
