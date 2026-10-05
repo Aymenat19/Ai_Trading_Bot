@@ -1080,7 +1080,21 @@ def detect_momentum_rally(df: pd.DataFrame, market: str) -> Optional[Tuple]:
 
     rsi_val  = float(rsi(close, 14).iloc[-1])
     vol_ma   = vol.rolling(20).mean()
-    vol_ratio = float(vol.iloc[-1] / float(vol_ma.iloc[-1])) if float(vol_ma.iloc[-1]) > 0 else 0.0
+
+    # Volume-spike and ATR-expansion windowed over the last 3 bars (2026-10-05):
+    # both are inherently brief "burst" signals — a volume spike or volatility
+    # expansion typically happens on 1-2 bars then fades — so requiring them to
+    # land on the exact current candle was too strict. Diagnosed against ZRO's
+    # real Sep-Oct 2026 rally (+127% over 3 weeks, choppy hour-to-hour despite
+    # the strong multi-day trend): across a 193-hour gap where the bot produced
+    # zero signals, vol_ratio<1.5 failed 79% of hours and atr not expanding
+    # failed 78% — the two most "bursty" gates, versus momentum_pct<5% (89%,
+    # left as-is — it's already a multi-bar measure and the real selectivity
+    # bar for this setup) and trend_ok (only 16%, a structural condition that
+    # doesn't need windowing). Using the best of the last 3 bars for these two
+    # still requires real evidence of a recent spike, just not on this exact hour.
+    vol_ratios_recent = (vol.iloc[-3:] / vol_ma.iloc[-3:]).replace([float("inf")], 0).fillna(0)
+    vol_ratio = float(vol_ratios_recent.max())
 
     # Price in upper 30% of 10-bar range (holding gains, not reversing)
     range_high = float(high.iloc[-10:].max())
@@ -1088,9 +1102,10 @@ def detect_momentum_rally(df: pd.DataFrame, market: str) -> Optional[Tuple]:
     range_span = range_high - range_low
     in_upper_range = (last_close - range_low) / range_span > 0.70 if range_span > 0 else False
 
-    # ATR expanding
+    # ATR expanding (windowed, see note above)
     atr_s = atr(df, 14)
-    atr_expanding = float(atr_s.iloc[-1]) > float(atr_s.iloc[-8:-1].mean()) * 1.05
+    atr_base = float(atr_s.iloc[-8:-1].mean())
+    atr_expanding = bool((atr_s.iloc[-3:] > atr_base * 1.05).any())
 
     # Thresholds raised from the original 4.0%/1.3x (no live win-rate data existed for
     # this setup) to be more selective while it establishes a live track record.
