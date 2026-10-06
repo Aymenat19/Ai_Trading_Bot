@@ -11773,5 +11773,30 @@
     "outcome_pct": 5.5,
     "resolved_at": "2026-10-05T16:00:54.482069+00:00",
     "notes": ""
+  },
+  {
+    "id": "b1c19a1a",
+    "logged_at": "2026-10-06T08:26:49.799612+00:00",
+    "market": "CRYPTO",
+    "symbol": "C98/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.018432,
+    "entry_high": 0.018468,
+    "stop": 0.017568,
+    "targets": [
+      0.019552,
+      0.020654
+    ],
+    "tp1": 0.019552,
+    "tp2": 0.020654,
+    "rr": 2.5,
+    "expected_pct": 11.9,
+    "confidence": 88,
+    "setup": "Momentum rally: +6.9% in 4 bars, RSI 75.0",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
