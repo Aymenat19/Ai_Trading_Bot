@@ -12048,5 +12048,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "642a0dd2",
+    "logged_at": "2026-10-08T17:26:05.332879+00:00",
+    "market": "CRYPTO",
+    "symbol": "SOXSB/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 34.45551,
+    "entry_high": 34.52449,
+    "stop": 33.148907,
+    "targets": [
+      36.166366,
+      37.842732
+    ],
+    "tp1": 36.166366,
+    "tp2": 37.842732,
+    "rr": 2.5,
+    "expected_pct": 9.7,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.2% in 4 bars, RSI 75.7",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
