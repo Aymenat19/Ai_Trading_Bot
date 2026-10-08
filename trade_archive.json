@@ -11973,5 +11973,30 @@
     "outcome_pct": -4.8,
     "resolved_at": "2026-10-07T15:40:59.339607+00:00",
     "notes": ""
+  },
+  {
+    "id": "22e9003f",
+    "logged_at": "2026-10-08T12:26:27.452231+00:00",
+    "market": "CRYPTO",
+    "symbol": "AEVO/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.027972,
+    "entry_high": 0.028028,
+    "stop": 0.026809,
+    "targets": [
+      0.029489,
+      0.030978
+    ],
+    "tp1": 0.029489,
+    "tp2": 0.030978,
+    "rr": 2.5,
+    "expected_pct": 10.6,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.9% in 4 bars, RSI 74.8",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
