@@ -12223,5 +12223,55 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "f82fe629",
+    "logged_at": "2026-10-10T16:46:35.932847+00:00",
+    "market": "CRYPTO",
+    "symbol": "EDU/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.074625,
+    "entry_high": 0.074775,
+    "stop": 0.071257,
+    "targets": [
+      0.079003,
+      0.083306
+    ],
+    "tp1": 0.079003,
+    "tp2": 0.083306,
+    "rr": 2.5,
+    "expected_pct": 11.5,
+    "confidence": 90,
+    "setup": "Momentum rally: +8.1% in 4 bars, RSI 72.4",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "f93f717d",
+    "logged_at": "2026-10-10T16:46:35.933055+00:00",
+    "market": "CRYPTO",
+    "symbol": "CHIP/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.055035,
+    "entry_high": 0.055145,
+    "stop": 0.052889,
+    "targets": [
+      0.057842,
+      0.060594
+    ],
+    "tp1": 0.057842,
+    "tp2": 0.060594,
+    "rr": 2.5,
+    "expected_pct": 10.0,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.7% in 4 bars, RSI 69.7",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
