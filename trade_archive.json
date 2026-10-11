@@ -12298,5 +12298,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "0e0896c6",
+    "logged_at": "2026-10-11T04:13:45.812691+00:00",
+    "market": "CRYPTO",
+    "symbol": "FRAX/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.347452,
+    "entry_high": 0.348148,
+    "stop": 0.332438,
+    "targets": [
+      0.367002,
+      0.386204
+    ],
+    "tp1": 0.367002,
+    "tp2": 0.386204,
+    "rr": 2.5,
+    "expected_pct": 11.0,
+    "confidence": 80,
+    "setup": "Momentum rally: +7.7% in 4 bars, RSI 76.2",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
