@@ -12473,5 +12473,55 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "4bb782b3",
+    "logged_at": "2026-10-11T17:46:42.490222+00:00",
+    "market": "CRYPTO",
+    "symbol": "ETHFI/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.74925,
+    "entry_high": 0.75075,
+    "stop": 0.723857,
+    "targets": [
+      0.782678,
+      0.815357
+    ],
+    "tp1": 0.782678,
+    "tp2": 0.815357,
+    "rr": 2.5,
+    "expected_pct": 8.7,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.3% in 4 bars, RSI 71.8",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "572ab7d9",
+    "logged_at": "2026-10-11T17:51:53.883653+00:00",
+    "market": "CRYPTO",
+    "symbol": "MEGA/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.047353,
+    "entry_high": 0.047447,
+    "stop": 0.045575,
+    "targets": [
+      0.049681,
+      0.051962
+    ],
+    "tp1": 0.049681,
+    "tp2": 0.051962,
+    "rr": 2.5,
+    "expected_pct": 9.6,
+    "confidence": 90,
+    "setup": "Momentum rally: +6.8% in 4 bars, RSI 76.7",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
