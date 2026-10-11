@@ -12273,5 +12273,30 @@
     "outcome_pct": 5.1,
     "resolved_at": "2026-10-10T17:51:32.358636+00:00",
     "notes": ""
+  },
+  {
+    "id": "67aae575",
+    "logged_at": "2026-10-11T01:44:21.213240+00:00",
+    "market": "CRYPTO",
+    "symbol": "LA/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.069131,
+    "entry_high": 0.069269,
+    "stop": 0.066935,
+    "targets": [
+      0.072031,
+      0.074862
+    ],
+    "tp1": 0.072031,
+    "tp2": 0.074862,
+    "rr": 2.5,
+    "expected_pct": 8.2,
+    "confidence": 79,
+    "setup": "Momentum rally: +6.0% in 4 bars, RSI 77.2",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
