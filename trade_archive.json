@@ -12423,5 +12423,55 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "2df35763",
+    "logged_at": "2026-10-11T17:36:34.817526+00:00",
+    "market": "CRYPTO",
+    "symbol": "FET/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.23996,
+    "entry_high": 0.24044,
+    "stop": 0.231485,
+    "targets": [
+      0.251094,
+      0.261988
+    ],
+    "tp1": 0.251094,
+    "tp2": 0.261988,
+    "rr": 2.5,
+    "expected_pct": 9.1,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.7% in 4 bars, RSI 70.9",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "ba0b911f",
+    "logged_at": "2026-10-11T17:41:31.431493+00:00",
+    "market": "CRYPTO",
+    "symbol": "IO/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.171329,
+    "entry_high": 0.171672,
+    "stop": 0.164419,
+    "targets": [
+      0.180351,
+      0.189202
+    ],
+    "tp1": 0.180351,
+    "tp2": 0.189202,
+    "rr": 2.5,
+    "expected_pct": 10.3,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.6% in 4 bars, RSI 68.6",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
