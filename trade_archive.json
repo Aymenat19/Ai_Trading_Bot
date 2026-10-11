@@ -12323,5 +12323,30 @@
     "outcome_pct": -4.3,
     "resolved_at": "2026-10-11T05:21:51.813647+00:00",
     "notes": ""
+  },
+  {
+    "id": "7a5ca74b",
+    "logged_at": "2026-10-11T07:05:07.100892+00:00",
+    "market": "CRYPTO",
+    "symbol": "BB/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.01022,
+    "entry_high": 0.01024,
+    "stop": 0.009776,
+    "targets": [
+      0.010797,
+      0.011364
+    ],
+    "tp1": 0.010797,
+    "tp2": 0.011364,
+    "rr": 2.5,
+    "expected_pct": 11.1,
+    "confidence": 82,
+    "setup": "Momentum rally: +7.5% in 4 bars, RSI 66.5",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
