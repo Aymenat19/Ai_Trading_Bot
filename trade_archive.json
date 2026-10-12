@@ -12748,5 +12748,30 @@
     "outcome_pct": 3.1,
     "resolved_at": "2026-10-12T16:43:48.068969+00:00",
     "notes": ""
+  },
+  {
+    "id": "a2d8c842",
+    "logged_at": "2026-10-12T19:53:35.283207+00:00",
+    "market": "CRYPTO",
+    "symbol": "INIT/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.126383,
+    "entry_high": 0.126637,
+    "stop": 0.121968,
+    "targets": [
+      0.132187,
+      0.137864
+    ],
+    "tp1": 0.132187,
+    "tp2": 0.137864,
+    "rr": 2.5,
+    "expected_pct": 9.0,
+    "confidence": 90,
+    "setup": "Momentum rally: +7.6% in 4 bars, RSI 75.3",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
