@@ -12773,5 +12773,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "d1be1838",
+    "logged_at": "2026-10-12T20:34:51.760231+00:00",
+    "market": "CRYPTO",
+    "symbol": "RENDER/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 2.156841,
+    "entry_high": 2.161159,
+    "stop": 2.063413,
+    "targets": [
+      2.278483,
+      2.397967
+    ],
+    "tp1": 2.278483,
+    "tp2": 2.397967,
+    "rr": 2.5,
+    "expected_pct": 11.1,
+    "confidence": 90,
+    "setup": "Momentum rally: +7.7% in 4 bars, RSI 69.2",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
