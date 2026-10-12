@@ -12494,9 +12494,9 @@
     "expected_pct": 8.7,
     "confidence": 87,
     "setup": "Momentum rally: +5.3% in 4 bars, RSI 71.8",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -3.4,
+    "resolved_at": "2026-10-12T06:58:40.271072+00:00",
     "notes": ""
   },
   {
@@ -12544,9 +12544,9 @@
     "expected_pct": 12.0,
     "confidence": 80,
     "setup": "Hot momentum pullback: +15.2% 24h mover, pulled back 4.3% from high",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "HIT_TP2",
+    "outcome_pct": 12.1,
+    "resolved_at": "2026-10-12T06:58:40.837543+00:00",
     "notes": ""
   }
 ]
