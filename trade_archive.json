@@ -12769,9 +12769,9 @@
     "expected_pct": 9.0,
     "confidence": 90,
     "setup": "Momentum rally: +7.6% in 4 bars, RSI 75.3",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -3.5,
+    "resolved_at": "2026-10-13T07:25:41.309563+00:00",
     "notes": ""
   },
   {
@@ -12794,9 +12794,9 @@
     "expected_pct": 11.1,
     "confidence": 90,
     "setup": "Momentum rally: +7.7% in 4 bars, RSI 69.2",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.3,
+    "resolved_at": "2026-10-13T07:25:41.694118+00:00",
     "notes": ""
   }
 ]
