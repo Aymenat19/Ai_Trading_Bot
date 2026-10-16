@@ -13023,5 +13023,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "2acab63e",
+    "logged_at": "2026-10-16T10:50:12.921703+00:00",
+    "market": "CRYPTO",
+    "symbol": "WLD/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.540259,
+    "entry_high": 0.541341,
+    "stop": 0.515015,
+    "targets": [
+      0.573032,
+      0.605263
+    ],
+    "tp1": 0.573032,
+    "tp2": 0.605263,
+    "rr": 2.5,
+    "expected_pct": 11.9,
+    "confidence": 88,
+    "setup": "Momentum rally: +7.2% in 4 bars, RSI 68.1",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
