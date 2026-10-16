@@ -12923,5 +12923,30 @@
     "outcome_pct": -4.0,
     "resolved_at": "2026-10-16T02:27:25.498645+00:00",
     "notes": ""
+  },
+  {
+    "id": "b1cb659b",
+    "logged_at": "2026-10-16T07:19:34.656658+00:00",
+    "market": "CRYPTO",
+    "symbol": "SOLV/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 0.004296,
+    "entry_high": 0.004304,
+    "stop": 0.004107,
+    "targets": [
+      0.004542,
+      0.004783
+    ],
+    "tp1": 0.004542,
+    "tp2": 0.004783,
+    "rr": 2.5,
+    "expected_pct": 11.2,
+    "confidence": 79,
+    "setup": "Momentum rally: +5.4% in 4 bars, RSI 70.1",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
