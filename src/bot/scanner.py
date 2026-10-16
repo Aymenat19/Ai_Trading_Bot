@@ -1080,21 +1080,7 @@ def detect_momentum_rally(df: pd.DataFrame, market: str) -> Optional[Tuple]:
 
     rsi_val  = float(rsi(close, 14).iloc[-1])
     vol_ma   = vol.rolling(20).mean()
-
-    # Volume-spike and ATR-expansion windowed over the last 3 bars (2026-10-05):
-    # both are inherently brief "burst" signals — a volume spike or volatility
-    # expansion typically happens on 1-2 bars then fades — so requiring them to
-    # land on the exact current candle was too strict. Diagnosed against ZRO's
-    # real Sep-Oct 2026 rally (+127% over 3 weeks, choppy hour-to-hour despite
-    # the strong multi-day trend): across a 193-hour gap where the bot produced
-    # zero signals, vol_ratio<1.5 failed 79% of hours and atr not expanding
-    # failed 78% — the two most "bursty" gates, versus momentum_pct<5% (89%,
-    # left as-is — it's already a multi-bar measure and the real selectivity
-    # bar for this setup) and trend_ok (only 16%, a structural condition that
-    # doesn't need windowing). Using the best of the last 3 bars for these two
-    # still requires real evidence of a recent spike, just not on this exact hour.
-    vol_ratios_recent = (vol.iloc[-3:] / vol_ma.iloc[-3:]).replace([float("inf")], 0).fillna(0)
-    vol_ratio = float(vol_ratios_recent.max())
+    vol_ratio = float(vol.iloc[-1] / float(vol_ma.iloc[-1])) if float(vol_ma.iloc[-1]) > 0 else 0.0
 
     # Price in upper 30% of 10-bar range (holding gains, not reversing)
     range_high = float(high.iloc[-10:].max())
@@ -1102,13 +1088,22 @@ def detect_momentum_rally(df: pd.DataFrame, market: str) -> Optional[Tuple]:
     range_span = range_high - range_low
     in_upper_range = (last_close - range_low) / range_span > 0.70 if range_span > 0 else False
 
-    # ATR expanding (windowed, see note above)
+    # ATR expanding
     atr_s = atr(df, 14)
-    atr_base = float(atr_s.iloc[-8:-1].mean())
-    atr_expanding = bool((atr_s.iloc[-3:] > atr_base * 1.05).any())
+    atr_expanding = float(atr_s.iloc[-1]) > float(atr_s.iloc[-8:-1].mean()) * 1.05
 
     # Thresholds raised from the original 4.0%/1.3x (no live win-rate data existed for
     # this setup) to be more selective while it establishes a live track record.
+    #
+    # 2026-10-05 → 2026-10-16: briefly windowed vol_ratio/atr_expanding over the
+    # last 3 bars instead of the current bar only, to catch bursts that had
+    # already faded by the scan. REVERTED — live data showed this setup's WR
+    # drop from a stable ~52% (N=32+21 across two windows) to 36.4% (N=33)
+    # afterward, with Oct 11 alone producing 9 fires (1 win): a 3-bar window
+    # lets one market-wide volatility burst qualify multiple symbols across
+    # several consecutive hours, so the gate was passing correlated, stale
+    # (burst already fading, not live) entries instead of independent fresh
+    # ones. Back to requiring the burst on the current candle.
     if not (momentum_pct >= 5.0 and trend_ok and 55 <= rsi_val <= 78
             and vol_ratio >= 1.5 and in_upper_range and atr_expanding):
         return None
@@ -1682,12 +1677,13 @@ def compute_break_model(df: pd.DataFrame, market: str, lookback_break: int = 20,
     #   VOLATILITY_EXPANSION  no live data
     #
     # ENABLED (positive expected value confirmed in live data):
-    #   MOMENTUM_RALLY          28W/25L  WR:53%  (N=53 combined, Sep8-Oct1)       ← promoted 2026-09-24,
-    #                           stable post-promotion (52% WR, N=21, Sep25-Oct1) — holding up
+    #   MOMENTUM_RALLY          49W/46L  WR:52%  stable Sep8-Oct5 (N=85 across 3 windows) ← promoted 2026-09-24,
+    #                           then dropped to 36% WR (N=33) Oct5-16 after a vol/ATR gate
+    #                           windowing change — REVERTED 2026-10-16, see gate comment below
     #   HOT_MOMENTUM_PULLBACK  106W/46L  WR:69%  avg_win:+14.9%  avg_loss:-5.2%  ← original track record,
-    #                           but 33% WR (N=33) Aug24-Sep24, then 20% WR (N=10) Sep25-Oct1 even
-    #                           AFTER the 2026-09-24 conf-cap fix — see conf-reject note below, that
-    #                           fix was ineffective and has been replaced
+    #                           but 33% WR (N=33) Aug24-Sep24, 20-29% WR since despite the
+    #                           2026-09-24/10-05 confidence fixes — persistently broken, see
+    #                           conf-reject note below. Still watching, not yet disabled.
     #   RANGE_BOUNCE             8W/6L   WR:57%  avg_win:+4.5%   avg_loss:-1.7%  ← secondary
     #
     # RE-ENABLED 2026-08-24, PROMOTED 2026-09-24 (were the only setups covering a
@@ -1704,7 +1700,12 @@ def compute_break_model(df: pd.DataFrame, market: str, lookback_break: int = 20,
     #     log showed the veto blocking 70+ real candidates in under 3 weeks during
     #     BTC-weak/alt-strong rotations). Verified 2026-10-02: zero Momentum Rally
     #     candidates dropped by btc_downtrend since the exemption shipped — working
-    #     as intended. Still WR~52% a week later — holding, not a fluke.
+    #     as intended, WR held at 52% through Oct 5. On 2026-10-16: the BTC-veto
+    #     exemption itself is NOT implicated in the subsequent Oct5-16 WR drop —
+    #     that was traced to a separate vol/ATR gate change (reverted, see
+    #     detect_momentum_rally) — but worth re-checking if WR doesn't recover,
+    #     since Oct had more BTC-downtrend hours than Sept and this setup now
+    #     trades through them.
     #   TREND_CONTINUATION: still no live fires — its structural requirements
     #     (confirmed swing structure + tight consolidation + breakout + the shared
     #     8%-max-stop/R:R gate) are just rare. Not broken, just unproven — leave as-is.
