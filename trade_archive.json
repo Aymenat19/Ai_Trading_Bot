@@ -13048,5 +13048,55 @@
     "outcome_pct": -4.7,
     "resolved_at": "2026-10-17T06:56:04.976188+00:00",
     "notes": ""
+  },
+  {
+    "id": "4cbbe5c6",
+    "logged_at": "2026-10-18T13:37:13.120363+00:00",
+    "market": "CRYPTO",
+    "symbol": "OGN/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.032058,
+    "entry_high": 0.032122,
+    "stop": 0.030552,
+    "targets": [
+      0.034012,
+      0.035934
+    ],
+    "tp1": 0.034012,
+    "tp2": 0.035934,
+    "rr": 2.5,
+    "expected_pct": 12.0,
+    "confidence": 88,
+    "setup": "Momentum rally: +6.6% in 4 bars, RSI 65.6",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "6bd75110",
+    "logged_at": "2026-10-18T13:49:16.415404+00:00",
+    "market": "CRYPTO",
+    "symbol": "TIA/USDT",
+    "action": "ADD",
+    "exchange": "Binance",
+    "entry_low": 0.626473,
+    "entry_high": 0.627727,
+    "stop": 0.609491,
+    "targets": [
+      0.646515,
+      0.675714
+    ],
+    "tp1": 0.646515,
+    "tp2": 0.675714,
+    "rr": 2.76,
+    "expected_pct": 7.8,
+    "confidence": 73,
+    "setup": "Range bounce: 10.1% channel, price at support 0.6183",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
