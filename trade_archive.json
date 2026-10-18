@@ -13069,9 +13069,9 @@
     "expected_pct": 12.0,
     "confidence": 88,
     "setup": "Momentum rally: +6.6% in 4 bars, RSI 65.6",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -4.7,
+    "resolved_at": "2026-10-18T14:15:10.843657+00:00",
     "notes": ""
   },
   {
@@ -13094,9 +13094,9 @@
     "expected_pct": 7.8,
     "confidence": 73,
     "setup": "Range bounce: 10.1% channel, price at support 0.6183",
-    "outcome": "PENDING",
-    "outcome_pct": null,
-    "resolved_at": null,
+    "outcome": "STOPPED_OUT",
+    "outcome_pct": -2.7,
+    "resolved_at": "2026-10-18T14:09:58.808333+00:00",
     "notes": ""
   }
 ]
