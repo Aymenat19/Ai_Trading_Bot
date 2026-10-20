@@ -13323,5 +13323,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "0d6c0169",
+    "logged_at": "2026-10-20T14:48:20.284845+00:00",
+    "market": "CRYPTO",
+    "symbol": "ALT/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 0.01035,
+    "entry_high": 0.01037,
+    "stop": 0.00993,
+    "targets": [
+      0.01107,
+      0.01203
+    ],
+    "tp1": 0.01107,
+    "tp2": 0.01203,
+    "rr": 3.89,
+    "expected_pct": 16.1,
+    "confidence": 83,
+    "setup": "Hot momentum pullback: +22.0% 24h mover, pulled back 6.4% from high",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
