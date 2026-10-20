@@ -13398,5 +13398,55 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "7c63cc0a",
+    "logged_at": "2026-10-20T15:50:03.833352+00:00",
+    "market": "CRYPTO",
+    "symbol": "AGPUB/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 8.47152,
+    "entry_high": 8.48848,
+    "stop": 8.197694,
+    "targets": [
+      8.832883,
+      9.185766
+    ],
+    "tp1": 8.832883,
+    "tp2": 9.185766,
+    "rr": 2.5,
+    "expected_pct": 8.3,
+    "confidence": 90,
+    "setup": "Momentum rally: +6.4% in 4 bars, RSI 69.3",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
+  },
+  {
+    "id": "4cc8f653",
+    "logged_at": "2026-10-20T15:50:03.833537+00:00",
+    "market": "CRYPTO",
+    "symbol": "COMP/USDT",
+    "action": "BUY",
+    "exchange": "Binance, Kraken",
+    "entry_low": 24.22575,
+    "entry_high": 24.27425,
+    "stop": 23.218039,
+    "targets": [
+      25.539951,
+      26.829901
+    ],
+    "tp1": 25.539951,
+    "tp2": 26.829901,
+    "rr": 2.5,
+    "expected_pct": 10.6,
+    "confidence": 84,
+    "setup": "Momentum rally: +5.8% in 4 bars, RSI 74.9",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
