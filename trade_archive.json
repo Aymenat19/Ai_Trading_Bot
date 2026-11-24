@@ -48,5 +48,30 @@
     "outcome_pct": null,
     "resolved_at": null,
     "notes": ""
+  },
+  {
+    "id": "e2fd7e31",
+    "logged_at": "2026-11-24T15:33:54.001093+00:00",
+    "market": "CRYPTO",
+    "symbol": "MRNAB/USDT",
+    "action": "BUY",
+    "exchange": "Binance",
+    "entry_low": 223.45632,
+    "entry_high": 223.90368,
+    "stop": 217.753796,
+    "targets": [
+      231.087755,
+      238.495511
+    ],
+    "tp1": 231.087755,
+    "tp2": 238.495511,
+    "rr": 2.5,
+    "expected_pct": 6.6,
+    "confidence": 87,
+    "setup": "Momentum rally: +5.7% in 4 bars, RSI 71.9",
+    "outcome": "PENDING",
+    "outcome_pct": null,
+    "resolved_at": null,
+    "notes": ""
   }
 ]
